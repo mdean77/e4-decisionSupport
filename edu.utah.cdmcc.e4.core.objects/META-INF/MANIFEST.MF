@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Decision Support Core Objects
+Bundle-SymbolicName: edu.utah.cdmcc.e4.core.objects
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: J. Michael Dean
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: javax.persistence,
+ org.hibernate.validator
+Require-Bundle: org.hibernate.eclipse.libs
+Export-Package: core.decision.object,
+ core.laboratory.object,
+ core.model.object,
+ core.patient.object,
+ core.user.object

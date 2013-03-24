@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Core hibernate routines
+Bundle-SymbolicName: edu.utah.cdmcc.e4.core.hibernate
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: J. Michael Dean
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: org.hibernate.eclipse.libs
+Export-Package: core.dao,
+ core.hibernate

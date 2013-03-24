@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Core Data Access Objects
+Bundle-SymbolicName: edu.utah.cdmcc.e4.core.objects.dao
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: edu.utah.cdmcc.e4.core.hibernate;bundle-version="1.0.0",
+ edu.utah.cdmcc.e4.core.objects;bundle-version="1.0.0",
+ org.hibernate.eclipse.libs
+Import-Package: org.eclipse.jface.dialogs,
+ org.hibernate
+Export-Package: dao.factory,
+ patient.dao,
+ user.dao
