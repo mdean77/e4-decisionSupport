@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import person.AccessType;
@@ -16,6 +17,8 @@ import person.PersonFactory;
 import person.PersonPackage;
 import person.StatusType;
 import person.User;
+import picu.PicuPackage;
+import picu.impl.PicuPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -105,11 +108,16 @@ public class PersonPackageImpl extends EPackageImpl implements PersonPackage {
 
 		isInited = true;
 
+		// Obtain or create and register interdependencies
+		PicuPackageImpl thePicuPackage = (PicuPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(PicuPackage.eNS_URI) instanceof PicuPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(PicuPackage.eNS_URI) : PicuPackage.eINSTANCE);
+
 		// Create package meta-data objects
 		thePersonPackage.createPackageContents();
+		thePicuPackage.createPackageContents();
 
 		// Initialize created meta-data
 		thePersonPackage.initializePackageContents();
+		thePicuPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		thePersonPackage.freeze();
@@ -215,6 +223,24 @@ public class PersonPackageImpl extends EPackageImpl implements PersonPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getPatient_User() {
+		return (EAttribute)patientEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPatient_Patients() {
+		return (EReference)patientEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getUser() {
 		return userEClass;
 	}
@@ -303,6 +329,8 @@ public class PersonPackageImpl extends EPackageImpl implements PersonPackage {
 		createEAttribute(patientEClass, PATIENT__BIRTHDATE);
 		createEAttribute(patientEClass, PATIENT__HEIGHT);
 		createEAttribute(patientEClass, PATIENT__STATUS);
+		createEAttribute(patientEClass, PATIENT__USER);
+		createEReference(patientEClass, PATIENT__PATIENTS);
 
 		userEClass = createEClass(USER);
 		createEAttribute(userEClass, USER__ACCOUNT_RIGHTS);
@@ -337,6 +365,9 @@ public class PersonPackageImpl extends EPackageImpl implements PersonPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		PicuPackage thePicuPackage = (PicuPackage)EPackage.Registry.INSTANCE.getEPackage(PicuPackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -357,6 +388,8 @@ public class PersonPackageImpl extends EPackageImpl implements PersonPackage {
 		initEAttribute(getPatient_Birthdate(), ecorePackage.getEDate(), "birthdate", null, 0, 1, Patient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPatient_Height(), ecorePackage.getEDouble(), "height", null, 0, 1, Patient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPatient_Status(), this.getStatusType(), "status", null, 0, 1, Patient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPatient_User(), ecorePackage.getEString(), "user", null, 0, 1, Patient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPatient_Patients(), thePicuPackage.getCensus(), null, "patients", null, 0, 1, Patient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(userEClass, User.class, "User", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUser_AccountRights(), this.getAccessType(), "accountRights", "0", 0, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

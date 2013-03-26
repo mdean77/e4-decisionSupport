@@ -9,7 +9,10 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: person,
  person.impl,
- person.util
+ person.util,
+ picu,
+ picu.impl,
+ picu.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy

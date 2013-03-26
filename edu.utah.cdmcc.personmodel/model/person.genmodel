@@ -25,6 +25,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Patient/birthdate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Patient/height"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Patient/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//Patient/user"/>
     </genClasses>
     <genClasses ecoreClass="person.ecore#//User">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute person.ecore#//User/accountRights"/>

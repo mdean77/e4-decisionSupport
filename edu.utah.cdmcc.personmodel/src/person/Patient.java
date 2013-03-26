@@ -3,6 +3,7 @@
 package person;
 
 import java.util.Date;
+import picu.Census;
 
 
 /**
@@ -23,6 +24,8 @@ import java.util.Date;
  *   <li>{@link person.Patient#getBirthdate <em>Birthdate</em>}</li>
  *   <li>{@link person.Patient#getHeight <em>Height</em>}</li>
  *   <li>{@link person.Patient#getStatus <em>Status</em>}</li>
+ *   <li>{@link person.Patient#getUser <em>User</em>}</li>
+ *   <li>{@link person.Patient#getPatients <em>Patients</em>}</li>
  * </ul>
  * </p>
  *
@@ -207,5 +210,57 @@ public interface Patient extends Person {
 	 * @generated
 	 */
 	void setStatus(StatusType value);
+
+	/**
+	 * Returns the value of the '<em><b>User</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>User</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>User</em>' attribute.
+	 * @see #setUser(String)
+	 * @see person.PersonPackage#getPatient_User()
+	 * @model
+	 * @generated
+	 */
+	String getUser();
+
+	/**
+	 * Sets the value of the '{@link person.Patient#getUser <em>User</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>User</em>' attribute.
+	 * @see #getUser()
+	 * @generated
+	 */
+	void setUser(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Patients</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Patients</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Patients</em>' reference.
+	 * @see #setPatients(Census)
+	 * @see person.PersonPackage#getPatient_Patients()
+	 * @model
+	 * @generated
+	 */
+	Census getPatients();
+
+	/**
+	 * Sets the value of the '{@link person.Patient#getPatients <em>Patients</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Patients</em>' reference.
+	 * @see #getPatients()
+	 * @generated
+	 */
+	void setPatients(Census value);
 
 } // Patient

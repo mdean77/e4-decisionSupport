@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -176,13 +177,31 @@ public interface PersonPackage extends EPackage {
 	int PATIENT__STATUS = PERSON_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>User</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATIENT__USER = PERSON_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Patients</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATIENT__PATIENTS = PERSON_FEATURE_COUNT + 7;
+
+	/**
 	 * The number of structural features of the '<em>Patient</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PATIENT_FEATURE_COUNT = PERSON_FEATURE_COUNT + 6;
+	int PATIENT_FEATURE_COUNT = PERSON_FEATURE_COUNT + 8;
 
 
 	/**
@@ -379,6 +398,28 @@ public interface PersonPackage extends EPackage {
 	EAttribute getPatient_Status();
 
 	/**
+	 * Returns the meta object for the attribute '{@link person.Patient#getUser <em>User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>User</em>'.
+	 * @see person.Patient#getUser()
+	 * @see #getPatient()
+	 * @generated
+	 */
+	EAttribute getPatient_User();
+
+	/**
+	 * Returns the meta object for the reference '{@link person.Patient#getPatients <em>Patients</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Patients</em>'.
+	 * @see person.Patient#getPatients()
+	 * @see #getPatient()
+	 * @generated
+	 */
+	EReference getPatient_Patients();
+
+	/**
 	 * Returns the meta object for class '{@link person.User <em>User</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -546,6 +587,22 @@ public interface PersonPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PATIENT__STATUS = eINSTANCE.getPatient_Status();
+
+		/**
+		 * The meta object literal for the '<em><b>User</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PATIENT__USER = eINSTANCE.getPatient_User();
+
+		/**
+		 * The meta object literal for the '<em><b>Patients</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PATIENT__PATIENTS = eINSTANCE.getPatient_Patients();
 
 		/**
 		 * The meta object literal for the '{@link person.impl.UserImpl <em>User</em>}' class.

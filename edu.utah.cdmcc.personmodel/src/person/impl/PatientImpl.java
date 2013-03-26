@@ -7,11 +7,13 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import person.Patient;
 import person.PersonPackage;
 import person.StatusType;
+import picu.Census;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,6 +28,8 @@ import person.StatusType;
  *   <li>{@link person.impl.PatientImpl#getBirthdate <em>Birthdate</em>}</li>
  *   <li>{@link person.impl.PatientImpl#getHeight <em>Height</em>}</li>
  *   <li>{@link person.impl.PatientImpl#getStatus <em>Status</em>}</li>
+ *   <li>{@link person.impl.PatientImpl#getUser <em>User</em>}</li>
+ *   <li>{@link person.impl.PatientImpl#getPatients <em>Patients</em>}</li>
  * </ul>
  * </p>
  *
@@ -151,6 +155,36 @@ public class PatientImpl extends PersonImpl implements Patient {
 	 * @ordered
 	 */
 	protected StatusType status = STATUS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getUser() <em>User</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUser()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String USER_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getUser() <em>User</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUser()
+	 * @generated
+	 * @ordered
+	 */
+	protected String user = USER_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getPatients() <em>Patients</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPatients()
+	 * @generated
+	 * @ordered
+	 */
+	protected Census patients;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -302,6 +336,65 @@ public class PatientImpl extends PersonImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getUser() {
+		return user;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setUser(String newUser) {
+		String oldUser = user;
+		user = newUser;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersonPackage.PATIENT__USER, oldUser, user));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Census getPatients() {
+		if (patients != null && patients.eIsProxy()) {
+			InternalEObject oldPatients = (InternalEObject)patients;
+			patients = (Census)eResolveProxy(oldPatients);
+			if (patients != oldPatients) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PersonPackage.PATIENT__PATIENTS, oldPatients, patients));
+			}
+		}
+		return patients;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Census basicGetPatients() {
+		return patients;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPatients(Census newPatients) {
+		Census oldPatients = patients;
+		patients = newPatients;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PersonPackage.PATIENT__PATIENTS, oldPatients, patients));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -317,6 +410,11 @@ public class PatientImpl extends PersonImpl implements Patient {
 				return getHeight();
 			case PersonPackage.PATIENT__STATUS:
 				return getStatus();
+			case PersonPackage.PATIENT__USER:
+				return getUser();
+			case PersonPackage.PATIENT__PATIENTS:
+				if (resolve) return getPatients();
+				return basicGetPatients();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -346,6 +444,12 @@ public class PatientImpl extends PersonImpl implements Patient {
 				return;
 			case PersonPackage.PATIENT__STATUS:
 				setStatus((StatusType)newValue);
+				return;
+			case PersonPackage.PATIENT__USER:
+				setUser((String)newValue);
+				return;
+			case PersonPackage.PATIENT__PATIENTS:
+				setPatients((Census)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -377,6 +481,12 @@ public class PatientImpl extends PersonImpl implements Patient {
 			case PersonPackage.PATIENT__STATUS:
 				setStatus(STATUS_EDEFAULT);
 				return;
+			case PersonPackage.PATIENT__USER:
+				setUser(USER_EDEFAULT);
+				return;
+			case PersonPackage.PATIENT__PATIENTS:
+				setPatients((Census)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -401,6 +511,10 @@ public class PatientImpl extends PersonImpl implements Patient {
 				return height != HEIGHT_EDEFAULT;
 			case PersonPackage.PATIENT__STATUS:
 				return status != STATUS_EDEFAULT;
+			case PersonPackage.PATIENT__USER:
+				return USER_EDEFAULT == null ? user != null : !USER_EDEFAULT.equals(user);
+			case PersonPackage.PATIENT__PATIENTS:
+				return patients != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -427,6 +541,8 @@ public class PatientImpl extends PersonImpl implements Patient {
 		result.append(height);
 		result.append(", status: ");
 		result.append(status);
+		result.append(", user: ");
+		result.append(user);
 		result.append(')');
 		return result.toString();
 	}
