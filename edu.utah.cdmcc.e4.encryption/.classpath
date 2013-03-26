@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry exported="true" kind="lib" path="icu4j-3.4.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-1.9.0-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-1.9.0-lite.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-1.9.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-1.9.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-acegisecurity-1.9.0-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-acegisecurity-1.9.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-acegisecurity-1.9.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-hibernate3-1.9.0-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-hibernate3-1.9.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-hibernate3-1.9.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-hibernate4-1.9.0-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-hibernate4-1.9.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-hibernate4-1.9.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-spring2-1.9.0-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-spring2-1.9.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-spring2-1.9.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-spring3-1.9.0-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-spring3-1.9.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-spring3-1.9.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-spring31-1.9.0-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-spring31-1.9.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-spring31-1.9.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-springsecurity2-1.9.0-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-springsecurity2-1.9.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-springsecurity2-1.9.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-springsecurity3-1.9.0-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-springsecurity3-1.9.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-springsecurity3-1.9.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-wicket13-1.9.0-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-wicket13-1.9.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-wicket13-1.9.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-wicket15-1.9.0-javadoc.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-wicket15-1.9.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasypt-wicket15-1.9.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
