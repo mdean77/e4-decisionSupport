@@ -9,5 +9,5 @@ Require-Bundle: edu.utah.cdmcc.e4.core.objects;bundle-version="1.0.0",
  edu.utah.cdmcc.e4.core.objects.dao;bundle-version="1.0.0",
  edu.utah.cdmcc.e4.core.hibernate;bundle-version="1.0.0",
  org.hibernate.eclipse.libs,
- edu.utah.cdmcc.hsqldb;bundle-version="1.0.0"
+ edu.utah.cdmcc.e4.hsqldb;bundle-version="1.0.0"
 Import-Package: org.hibernate.validator
