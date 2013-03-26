@@ -4,5 +4,7 @@
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/edu.utah.cdmcc.e4.core.hibernate"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/edu.utah.cdmcc.e4.core.objects"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
