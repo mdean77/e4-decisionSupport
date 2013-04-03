@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="juno" sequenceNumber="14">
+<?pde version="3.8"?><target name="juno" sequenceNumber="22">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.hibernate.eclipse.feature.source.feature.group" version="3.6.0.Final-v20121205-1936-B77"/>
 <repository location="http://download.jboss.org/jbosstools/updates/stable/juno"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.datatools.enablement.hsqldb.feature.feature.group" version="1.10.2.v201209181447-67E2AqGCM7KfNUIqKM8KIQ"/>
+<unit id="org.eclipse.e4.rcp.feature.group" version="1.1.2.v20130130-191718-91FUvGP7GIX2Kgz-z-gvjMvXV1NS"/>
 <repository location="http://download.eclipse.org/releases/juno/201303010900"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.e4.rcp.feature.group" version="1.1.2.v20130130-191718-91FUvGP7GIX2Kgz-z-gvjMvXV1NS"/>
+<unit id="org.eclipse.datatools.enablement.hsqldb.feature.feature.group" version="1.10.2.v201209181447-67E2AqGCM7KfNUIqKM8KIQ"/>
 <repository location="http://download.eclipse.org/releases/juno/201303010900"/>
 </location>
 </locations>
