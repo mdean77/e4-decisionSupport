@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_pnvwYJ0kEeKMnOW_CXpW5Q" elementId="org.eclipse.e4.ide.application">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_pnvwYZ0kEeKMnOW_CXpW5Q" label="EC Tutorial with Glucose Model" x="0" y="0" width="1200" height="800">
+    <children xsi:type="basic:PartSashContainer" xmi:id="_vUZxMJ0kEeKMnOW_CXpW5Q" elementId="edu.utah.cdmcc.e4.glucose.tutorial.partsashcontainer.0" containerData="" horizontal="true">
+      <children xsi:type="basic:PartStack" xmi:id="_wiCpAJ0kEeKMnOW_CXpW5Q" elementId="edu.utah.cdmcc.e4.glucose.tutorial.partstack.0" containerData="30">
+        <children xsi:type="basic:Part" xmi:id="_xwojEJ0kEeKMnOW_CXpW5Q" elementId="edu.utah.cdmcc.e4.glucose.tutorial.patientsListingPart" containerData="" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.tutorial/edu.utah.cdmcc.e4.glucose.tutorial.parts.PatientListView" label="Intensive Care Unit Model"/>
+      </children>
+      <children xsi:type="basic:PartSashContainer" xmi:id="_2yLn0J-JEeKKSrY8a9STIA" elementId="edu.utah.cdmcc.e4.glucose.tutorial.partsashcontainer.1" containerData="70">
+        <children xsi:type="basic:PartStack" xmi:id="_xRw1wJ0kEeKMnOW_CXpW5Q" elementId="edu.utah.cdmcc.e4.glucose.tutorial.partstack.1" containerData="">
+          <children xsi:type="basic:Part" xmi:id="_yJZoYJ0kEeKMnOW_CXpW5Q" elementId="edu.utah.cdmcc.e4.glucose.tutorial.patientDetailPart" containerData="" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.tutorial/edu.utah.cdmcc.e4.glucose.tutorial.parts.PatientDetailView" label="Patient Details"/>
+        </children>
+        <children xsi:type="basic:PartStack" xmi:id="_5eA78J-JEeKKSrY8a9STIA" elementId="edu.utah.cdmcc.e4.glucose.tutorial.partstack.2">
+          <children xsi:type="basic:Part" xmi:id="_px5oYJ-JEeKKSrY8a9STIA" elementId="edu.utah.cdmcc.e4.glucose.tutorial.userDetailPart" label="User Details"/>
+        </children>
+        <children xsi:type="basic:PartStack" xmi:id="_imfVIJ-KEeKKSrY8a9STIA" elementId="edu.utah.cdmcc.e4.glucose.tutorial.partstack.3">
+          <children xsi:type="basic:Part" xmi:id="_jVQfoJ-KEeKKSrY8a9STIA" elementId="edu.utah.cdmcc.e4.glucose.tutorial.decisionDetailPart" label="Decision Details"/>
+        </children>
+      </children>
+    </children>
+    <mainMenu xmi:id="_NqzeAJ-NEeKKSrY8a9STIA" elementId="edu.utah.cdmcc.e4.glucose.tutorial.menu.0">
+      <children xsi:type="menu:Menu" xmi:id="_QpcZYJ-NEeKKSrY8a9STIA" elementId="edu.utah.cdmcc.e4.glucose.tutorial.menu.1" label="File"/>
+      <children xsi:type="menu:Menu" xmi:id="_abVxQJ-NEeKKSrY8a9STIA" elementId="edu.utah.cdmcc.e4.glucose.tutorial.menu.2" label="Edit"/>
+      <children xsi:type="menu:Menu" xmi:id="_a5Lj0J-NEeKKSrY8a9STIA" elementId="edu.utah.cdmcc.e4.glucose.tutorial.menu.3" label="Decision"/>
+      <children xsi:type="menu:Menu" xmi:id="_bWrYIJ-NEeKKSrY8a9STIA" elementId="edu.utah.cdmcc.e4.glucose.tutorial.menu.4" label="Database">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_h69kgJ-NEeKKSrY8a9STIA" elementId="edu.utah.cdmcc.e4.glucose.tutorial.handledmenuitem.addFakeData" label="Add Fake Data" command="_j05hoJ-NEeKKSrY8a9STIA"/>
+      </children>
+    </mainMenu>
+  </children>
+  <handlers xmi:id="_4-w3UJ-NEeKKSrY8a9STIA" elementId="" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.tutorial/edu.utah.cdmcc.e4.glucose.tutorial.handlers.FakeDataHandler" command="_j05hoJ-NEeKKSrY8a9STIA"/>
+  <handlers xmi:id="_SLyRsJ-UEeKKSrY8a9STIA" elementId="" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.tutorial/edu.utah.cdmcc.e4.glucose.tutorial.handlers.QuitHandler" command="__El-YJ-TEeKKSrY8a9STIA"/>
+  <handlers xmi:id="_b7AwEJ-UEeKKSrY8a9STIA" elementId="" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.tutorial/edu.utah.cdmcc.e4.glucose.tutorial.handlers.AboutHandler" command="_-imEkJ-TEeKKSrY8a9STIA"/>
+  <commands xmi:id="_j05hoJ-NEeKKSrY8a9STIA" elementId="edu.utah.cdmcc.e4.glucose.tutorial.command.addFakeData" commandName="fakeDataCommand" description="Command to create fake data"/>
+  <commands xmi:id="_-imEkJ-TEeKKSrY8a9STIA" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand" description="Command to bring up About dialog."/>
+  <commands xmi:id="__El-YJ-TEeKKSrY8a9STIA" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <addons xmi:id="_pnvwYp0kEeKMnOW_CXpW5Q" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_pnvwY50kEeKMnOW_CXpW5Q" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_pnvwZJ0kEeKMnOW_CXpW5Q" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_pnvwZZ0kEeKMnOW_CXpW5Q" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_pnvwZp0kEeKMnOW_CXpW5Q" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_pnvwZ50kEeKMnOW_CXpW5Q" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            name="edu.utah.cdmcc.e4.glucose.tutorial"
+            application="org.eclipse.e4.ui.workbench.swt.E4Application">
+         <property
+               name="clearPersistedState"
+               value="true">
+         </property>
+         <property
+               name="applicationCSS"
+               value="platform:/plugin/edu.utah.cdmcc.e4.glucose.tutorial/css/default.css">
+         </property>
+         <property
+               name="appName"
+               value="edu.utah.cdmcc.e4.glucose.tutorial">
+         </property>
+      </product>
+   </extension>
+
+</plugin>
