@@ -84,4 +84,6 @@ public interface GlucoseFactory extends EFactory {
 	 */
 	GlucosePackage getGlucosePackage();
 
+	//IntensiveCareUnit createExampleGlucoseModel();
+
 } //GlucoseFactory

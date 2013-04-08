@@ -829,6 +829,7 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 		addEEnumLiteral(statusTypeEEnum, StatusType.CURRENT);
 		addEEnumLiteral(statusTypeEEnum, StatusType.ARCHIVED);
 		addEEnumLiteral(statusTypeEEnum, StatusType.INVALID);
+		addEEnumLiteral(statusTypeEEnum, StatusType.SAMPLE);
 
 		initEEnum(userActionTypeEEnum, UserActionType.class, "UserActionType");
 		addEEnumLiteral(userActionTypeEEnum, UserActionType.ACCEPT);

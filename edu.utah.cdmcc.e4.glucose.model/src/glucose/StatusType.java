@@ -49,7 +49,15 @@ public enum StatusType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INVALID(2, "Invalid", "Invalid");
+	INVALID(2, "Invalid", "Invalid"), /**
+	 * The '<em><b>Sample</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #SAMPLE_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	SAMPLE(3, "Sample", "Sample");
 
 	/**
 	 * The '<em><b>Current</b></em>' literal value.
@@ -94,6 +102,21 @@ public enum StatusType implements Enumerator {
 	public static final int INVALID_VALUE = 2;
 
 	/**
+	 * The '<em><b>Sample</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Sample</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #SAMPLE
+	 * @model name="Sample"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int SAMPLE_VALUE = 3;
+
+	/**
 	 * An array of all the '<em><b>Status Type</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -104,6 +127,7 @@ public enum StatusType implements Enumerator {
 			CURRENT,
 			ARCHIVED,
 			INVALID,
+			SAMPLE,
 		};
 
 	/**
@@ -157,6 +181,7 @@ public enum StatusType implements Enumerator {
 			case CURRENT_VALUE: return CURRENT;
 			case ARCHIVED_VALUE: return ARCHIVED;
 			case INVALID_VALUE: return INVALID;
+			case SAMPLE_VALUE: return SAMPLE;
 		}
 		return null;
 	}

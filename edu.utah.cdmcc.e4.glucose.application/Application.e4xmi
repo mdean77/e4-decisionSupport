@@ -6,7 +6,7 @@
         <children xsi:type="basic:PartSashContainer" xmi:id="_IjDqBpibEeKOPO56Fzh8Mw" horizontal="true">
           <children xsi:type="basic:PartSashContainer" xmi:id="_0siWEJibEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.partsashcontainer.0" containerData="25">
             <children xsi:type="basic:PartStack" xmi:id="_QNg3cJifEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.partstack.1" containerData="35">
-              <children xsi:type="basic:Part" xmi:id="_IjDqCJibEeKOPO56Fzh8Mw" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.parts.SamplePart" label="Active Patient"/>
+              <children xsi:type="basic:Part" xmi:id="_IjDqCJibEeKOPO56Fzh8Mw" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.parts.PatientListPart" label="Active Patient"/>
             </children>
             <children xsi:type="basic:PartStack" xmi:id="_Q05AgJifEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.partstack.2" containerData="35">
               <children xsi:type="basic:Part" xmi:id="_ov16kJibEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.part.1" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.parts.SamplePart" label="Properties"/>

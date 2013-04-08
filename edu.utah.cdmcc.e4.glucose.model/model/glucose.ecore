@@ -115,6 +115,7 @@
         <details key="documentation" value="Patient is invalid or sample, and should not be archived to remote database."/>
       </eAnnotations>
     </eLiterals>
+    <eLiterals name="Sample" value="3" literal="Sample"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="calendar" instanceClassName="java.util.Calendar"/>
   <eClassifiers xsi:type="ecore:EClass" name="ClinicalDecision">
