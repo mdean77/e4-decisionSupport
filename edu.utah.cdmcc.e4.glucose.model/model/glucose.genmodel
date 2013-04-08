@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.utah.cdmcc.e4.glucose.model/src" modelPluginID="edu.utah.cdmcc.e4.glucose.model"
-    modelName="Glucose" importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0"
+    modelName="Glucose" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
     copyrightFields="false">
   <foreignModel>glucose.ecore</foreignModel>
   <genPackages prefix="Glucose" disposableProviderFactory="true" ecorePackage="glucose.ecore#/">
@@ -13,6 +13,7 @@
       <genEnumLiterals ecoreEnumLiteral="glucose.ecore#//StatusType/Current"/>
       <genEnumLiterals ecoreEnumLiteral="glucose.ecore#//StatusType/Archived"/>
       <genEnumLiterals ecoreEnumLiteral="glucose.ecore#//StatusType/Invalid"/>
+      <genEnumLiterals ecoreEnumLiteral="glucose.ecore#//StatusType/Sample"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="glucose.ecore#//UserActionType">
       <genEnumLiterals ecoreEnumLiteral="glucose.ecore#//UserActionType/Accept"/>
