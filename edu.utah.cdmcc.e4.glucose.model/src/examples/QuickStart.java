@@ -125,6 +125,7 @@ public class QuickStart {
 		user.setAccountRights(AccessType.NORMAL);
 		user.setFirstName("Michael");
 		user.setLastName("Dean");
+		
 		//picu.getUsers().add(user);
 		//session.save(user);
 		
@@ -140,6 +141,7 @@ public class QuickStart {
 		patient.setMedRecNum("12-34-56");
 		patient.setStatus(StatusType.CURRENT);
 		patient.setStudyID("CHOM0003");
+
 		//session.save(patient);
 		
 		

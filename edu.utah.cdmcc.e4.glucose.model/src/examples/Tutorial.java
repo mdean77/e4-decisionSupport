@@ -32,9 +32,12 @@ import glucose.GlucoseFactory;
 import glucose.GlucosePackage;
 import glucose.IntensiveCareUnit;
 import glucose.Patient;
+import glucose.Person;
 import glucose.StatusType;
 import glucose.User;
 import java.util.Calendar;
+
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -55,6 +58,8 @@ import org.hibernate.cfg.Environment;
  * @version $Revision: 1.4 $
  */
 public class Tutorial {
+
+	private static IntensiveCareUnit picu;
 
 	/** The main method */
 	public static void main(String[] args) {
@@ -132,46 +137,27 @@ public class Tutorial {
 			final Session session = sessionFactory.openSession();
 			session.beginTransaction();
 
-			// Create a library.
-			IntensiveCareUnit picu = GlucoseFactory.eINSTANCE.createIntensiveCareUnit();
+			// Retrieve the intensive care unit and its child objects.
+			// Note that you must use the EClass name in the HQL query.
+			Query query = session.createQuery("FROM IntensiveCareUnit");
+			List<?> intensiveCareUnits = query.list();
+			if(intensiveCareUnits.isEmpty()){
+				picu = GlucoseFactory.eINSTANCE.createIntensiveCareUnit();
+			} else {
+				picu = (IntensiveCareUnit) intensiveCareUnits.get(0);
+			}
+			
+			
 			// Make it persistent.
 			session.save(picu);
+			addFakeData();
 
-			// create a user
-			User user = GlucoseFactory.eINSTANCE.createUser();
-			user.setAccountName("mdean");
-			user.setAccountRights(AccessType.NORMAL);
-			user.setFirstName("Michael");
-			user.setLastName("Dean");
-			picu.getUsers().add(user);
-			
-			Patient patient = GlucoseFactory.eINSTANCE.createPatient();
-			//patient.setBirthdate(new GregorianCalendar());
-			patient.setBirthdate(new GregorianCalendar(1999, 12, 12)); 
 
-			patient.setCreatedBy(user);
-			patient.setFirstName("Sally Jo");
-			patient.setLastName("Zuspan");
-			patient.setHeight(150.);
-			patient.setWeight(57.6);
-			patient.setMedRecNum("12-34-56");
-			patient.setStatus(StatusType.CURRENT);
-			patient.setStudyID("CHOM0003");
-
-			
-			
-			GlucoseDecision decision = GlucoseFactory.eINSTANCE.createGlucoseDecision();
-			decision.setCreatedBy(user);
-			decision.setCarbohydrateStatus(CarbohydrateStatusType.UNCHANGED);
-
-			// Add the Writer and Book to the Library.
-			picu.getPatients().add(patient);
-			picu.getUsers().add(user);
 
 
 			// Commit the changes to the database.
 			session.getTransaction().commit();
-			// Close the session. Not necessary if
+			// Close the session. 
 			session.close();
 		}
 
@@ -179,84 +165,48 @@ public class Tutorial {
 			final Session session = sessionFactory.openSession();
 			session.beginTransaction();
 
-			// Retrieve the Library and its child objects.
+			// Retrieve the intensive care unit and its child objects.
 			// Note that you must use the EClass name in the HQL query.
 			Query query = session.createQuery("FROM IntensiveCareUnit");
 			List<?> intensiveCareUnits = query.list();
-			IntensiveCareUnit picu = (IntensiveCareUnit) intensiveCareUnits.get(0);
+			picu = (IntensiveCareUnit) intensiveCareUnits.get(0);
 
-			// Obtain the Writer and Book
+			// Obtain the first user and patient
 			User user = picu.getUsers().get(0);
-			System.out.println(user.getName());
+			System.out.println("First user ==> " + user.getName());
 			Patient patient = picu.getPatients().get(0);
-			System.out.println(patient.getName());
+			System.out.println("First patient ==> " + patient.getName());
+			System.out.println();
 
 			// Verify that the eContainer and references are set correctly.
 			assert (patient.eContainer() == picu);
 			assert (patient.getCreatedBy() == user);
-
-			User user2 = GlucoseFactory.eINSTANCE.createUser();
-			user2.setAccountName("mdean");
-			user2.setAccountRights(AccessType.NORMAL);
-			user2.setFirstName("Michael");
-			user2.setLastName("Dean");
-
-			Patient patient2	 = GlucoseFactory.eINSTANCE.createPatient();
-			patient2.setBirthdate(new GregorianCalendar(1999, 12, 12));  
-			patient2.setCreatedBy(user);
-			patient2.setFirstName("Sally Jo");
-			patient2.setLastName("Zuspan");
-			patient2.setHeight(150.);
-			patient2.setWeight(57.6);
-			patient2.setMedRecNum("12-34-56");
-			patient2.setStatus(StatusType.CURRENT);
-			patient2.setStudyID("CHOM0003");
-		
-
-			picu.getPatients().add(patient2);
-			picu.getUsers().add(user2);
-			picu.getPatients().add(patient2);
-			picu.getUsers().add(user2);
-			picu.getPatients().add(patient2);
-			picu.getUsers().add(user2);
+			
+			System.out.println("List of all persons in database:");
+			query = session.createQuery("From Person");
+			List<?> persons = query.list();
+			for (Iterator<?> it = persons.iterator(); it.hasNext();){
+				Person person = (Person) it.next();
+				System.out.println(person.getName());
+			}
+			System.out.println("The number of persons is " + persons.size());
+			System.out.println();
+			
+			
+			System.out.println("List of all PATIENTS in database:");
+			EList<Patient> patients = picu.getPatients();
+			for (Iterator<?> it = patients.iterator(); it.hasNext();){
+				patient = (Patient) it.next();
+				System.out.println(patient.getName());
+			}
+			System.out.println("The number of patients is " + patients.size());
+			System.out.println();		
 
 			// Commit.
 			session.getTransaction().commit();
 			session.close();
 		}
 
-//		{
-//			final Session session = sessionFactory.openSession();
-//			session.beginTransaction();
-//
-//			// Retrieve all Books and display their titles.
-//			Query query = session.createQuery("FROM Book");
-//			List<?> books = query.list();
-//			for (Iterator<?> it = books.iterator(); it.hasNext();) {
-//				Book book = (Book) it.next();
-//				System.out.println(book.getTitle());
-//			}
-//
-//			// Retrieve George Orwell's book.
-//			query = session.createQuery("SELECT book FROM Book book, Writer writ WHERE "
-//					+ " book.title='1984' AND book.author=writ AND writ.name='G. Orwell'");
-//			books = query.list();
-//
-//			// Show some results
-//			System.out.println("There are " + books.size() + " in the Library.");
-//			System.out.println(books.get(0).getClass().getName());
-//			Book book = (Book) books.get(0);
-//			System.out.println(book.getTitle());
-//			System.out.println(book.getAuthor().getName());
-//
-//			// Count the number of books in the library
-//			query = session
-//					.createQuery("SELECT count(allbooks) FROM Library lib LEFT JOIN lib.books AS allbooks "
-//							+ " WHERE lib.name='My Library'");
-//			int count = ((Number) query.uniqueResult()).intValue();
-//			System.out.println("There are " + count + " books in the library");
-//			session.getTransaction().commit();
-//		}
 //
 //		try {
 //			String uriStr = "hibernate://?" + HibernateResource.DS_NAME_PARAM + "=" + dataStoreName;
@@ -299,5 +249,59 @@ public class Tutorial {
 //		} catch (IOException e) {
 //			throw new Error("IOException", e);
 //		}
+		
+		
+	}
+	
+private static void addFakeData() {
+		
+		// Create the objects
+		Patient patient1 = GlucoseFactory.eINSTANCE.createPatient();
+		picu.getPatients().add(patient1);
+		User user1 = GlucoseFactory.eINSTANCE.createUser();
+		picu.getUsers().add(user1);
+		Patient patient2 = GlucoseFactory.eINSTANCE.createPatient();
+		picu.getPatients().add(patient2);
+		User user2 = GlucoseFactory.eINSTANCE.createUser();
+		picu.getUsers().add(user2);
+		GlucoseDecision decision1 = GlucoseFactory.eINSTANCE.createGlucoseDecision();
+		GlucoseDecision decision2 = GlucoseFactory.eINSTANCE.createGlucoseDecision();
+		GlucoseDecision decision3 = GlucoseFactory.eINSTANCE.createGlucoseDecision();
+		GlucoseDecision decision4 = GlucoseFactory.eINSTANCE.createGlucoseDecision();
+		patient1.getDecisions().add(decision1);
+		patient1.getDecisions().add(decision2);
+		patient2.getDecisions().add(decision3);
+		patient2.getDecisions().add(decision4);
+		
+		// Give the object fields some values
+		GregorianCalendar birthdate1 = new GregorianCalendar(2000,5,25);
+		GregorianCalendar birthdate2 = new GregorianCalendar(2010,5,25);
+		GregorianCalendar decisionDates1 = new GregorianCalendar(2000,5,26);
+		GregorianCalendar decisionDates2 = new GregorianCalendar(2000,5,27);
+		GregorianCalendar decisionDates3 = new GregorianCalendar(2010,5,26);
+		GregorianCalendar decisionDates4 = new GregorianCalendar(2010,5,27);
+		initializePatientValues(patient1,"Dean","Mike",birthdate1,125.,55.6,"CHOM0099","12-34-56");
+		initializePatientValues(patient2,"Zuspan","Sally",birthdate2,114.6,35.6,"CHLA9099","34-56-78");
+		initializePersonValues(user1,"Welkie", "Katy");
+		initializePersonValues(user2,"Maloney", "Chris");
+	}
+	
+	private static void initializePatientValues(Patient patient,
+			String last, String first, GregorianCalendar birthdate,
+			Double height, Double weight, String studyID, String medRecNum){
+		patient.setBirthdate(birthdate);
+		initializePersonValues(patient, last, first);
+		patient.setHeight(height);
+		patient.setWeight(weight);
+		patient.setMedRecNum(medRecNum);
+		patient.setStudyID(studyID);
+		patient.setStatus(StatusType.SAMPLE);
+		
+	}
+
+	private static void initializePersonValues(Person person, String last,
+			String first) {
+		person.setFirstName(first);
+		person.setLastName(last);
 	}
 }
