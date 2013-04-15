@@ -27,6 +27,7 @@
       <genEnumLiterals ecoreEnumLiteral="glucose.ecore#//CarbohydrateStatusType/increased"/>
     </genEnums>
     <genDataTypes ecoreDataType="glucose.ecore#//calendar"/>
+    <genDataTypes ecoreDataType="glucose.ecore#//gregorian"/>
     <genClasses ecoreClass="glucose.ecore#//Person">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//Person/lastName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//Person/firstName"/>
@@ -73,6 +74,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//ClinicalDecision/userAction"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//ClinicalDecision/minutesToNextEvaluation"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference glucose.ecore#//ClinicalDecision/createdBy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//ClinicalDecision/decisionID"/>
     </genClasses>
     <genClasses ecoreClass="glucose.ecore#//GlucoseDecision">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//GlucoseDecision/previousGlucoseConcentration"/>

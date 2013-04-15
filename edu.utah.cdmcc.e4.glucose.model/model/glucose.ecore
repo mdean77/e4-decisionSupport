@@ -14,7 +14,11 @@
       </eAnnotations>
     </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral=""/>
+        defaultValueLiteral="">
+      <eAnnotations source="teneo.jpa">
+        <details key="appinfo" value="@Basic(optional=false)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="personID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         iD="true">
@@ -27,19 +31,22 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Patient object represents a patient in the intensive care unit."/>
     </eAnnotations>
+    <eAnnotations source="teneo.jpa">
+      <details key="appinfo" value="import java.util.GregorianCalendar;"/>
+    </eAnnotations>
     <eOperations name="getBirthdateString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="java.text.DateFormat df = java.text.DateFormat.getDateInstance(java.text.DateFormat.LONG);&#xA;return df.format(birthdate.getTime());"/>
+        <details key="body" value="&lt;%java.text.DateFormat%> df = DateFormat.getDateInstance(DateFormat.LONG);&#xA;return df.format(birthdate.getTime());"/>
       </eAnnotations>
     </eOperations>
     <eOperations name="getTodayAgeYears" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getDeltaAgeYears(new GregorianCalendar());"/>
+        <details key="body" value="return getDeltaAgeYears(new &lt;%java.util.GregorianCalendar%>());"/>
       </eAnnotations>
     </eOperations>
     <eOperations name="getTodayAgeDays" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="body" value="return getDeltaAgeDays(new GregorianCalendar());"/>
+        <details key="body" value="return getDeltaAgeDays(new &lt;%java.util.GregorianCalendar%>());"/>
       </eAnnotations>
     </eOperations>
     <eOperations name="getDeltaAgeYears" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
