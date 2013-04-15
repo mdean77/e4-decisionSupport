@@ -30,6 +30,7 @@
     <genClasses ecoreClass="glucose.ecore#//Person">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//Person/lastName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//Person/firstName"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//Person/personID"/>
       <genOperations ecoreOperation="glucose.ecore#//Person/getName"/>
     </genClasses>
     <genClasses ecoreClass="glucose.ecore#//Patient">
