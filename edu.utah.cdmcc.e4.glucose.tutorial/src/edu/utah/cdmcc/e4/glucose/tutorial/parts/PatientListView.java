@@ -1,7 +1,5 @@
 package edu.utah.cdmcc.e4.glucose.tutorial.parts;
 
-import glucose.IntensiveCareUnitService;
-import glucose.provider.GlucoseItemProviderAdapterFactory;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -16,6 +14,9 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.widgets.Composite;
+
+import edu.utah.cdmcc.glucose.tutorial.services.IntensiveCareUnitService;
+import glucose.provider.GlucoseItemProviderAdapterFactory;
 
 public class PatientListView {
 

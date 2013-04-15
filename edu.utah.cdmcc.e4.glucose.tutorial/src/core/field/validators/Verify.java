@@ -9,6 +9,7 @@ import org.eclipse.swt.events.VerifyEvent;
  *
  */
 public final class Verify {
+	
 	public static void verifyFloatText(final VerifyEvent evt) {
 		char[] chars = getEventChars(evt);
 		for (int i = 0; i < chars.length;) {
@@ -28,15 +29,16 @@ public final class Verify {
 			return;
 		}
 	}
-	public static void verifyLettersText(final VerifyEvent evt){
-	char[] chars = getEventChars(evt);
-	for (int i = 0; i < chars.length;) {
-		if (!(Character.isLetter(chars[i])))
-			evt.doit = false;
-		return;
+
+	public static void verifyLettersText(final VerifyEvent evt) {
+		char[] chars = getEventChars(evt);
+		for (int i = 0; i < chars.length;) {
+			if (!(Character.isLetter(chars[i])))
+				evt.doit = false;
+			return;
+		}
 	}
-	}
-	
+
 	private static char[] getEventChars(final VerifyEvent evt) {
 		String string = evt.text;
 		char[] chars = new char[string.length()];
