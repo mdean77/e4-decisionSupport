@@ -39,6 +39,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link glucose.impl.ClinicalDecisionImpl#getUserAction <em>User Action</em>}</li>
  *   <li>{@link glucose.impl.ClinicalDecisionImpl#getMinutesToNextEvaluation <em>Minutes To Next Evaluation</em>}</li>
  *   <li>{@link glucose.impl.ClinicalDecisionImpl#getCreatedBy <em>Created By</em>}</li>
+ *   <li>{@link glucose.impl.ClinicalDecisionImpl#getDecisionID <em>Decision ID</em>}</li>
  * </ul>
  * </p>
  *
@@ -314,6 +315,26 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 	 * @ordered
 	 */
 	protected User createdBy;
+
+	/**
+	 * The default value of the '{@link #getDecisionID() <em>Decision ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDecisionID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DECISION_ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDecisionID() <em>Decision ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDecisionID()
+	 * @generated
+	 * @ordered
+	 */
+	protected String decisionID = DECISION_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -650,6 +671,40 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getDecisionID() {
+		return decisionID;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDecisionID(String newDecisionID) {
+		String oldDecisionID = decisionID;
+		decisionID = newDecisionID;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GlucosePackage.CLINICAL_DECISION__DECISION_ID, oldDecisionID, decisionID));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void advise(String message) {
+		if (this.getAdviceText().length() == 0) {
+				this.setAdviceText(message);
+			} else {
+			this.setAdviceText(this.getAdviceText() + "\n" + message);
+			}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -682,6 +737,8 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 			case GlucosePackage.CLINICAL_DECISION__CREATED_BY:
 				if (resolve) return getCreatedBy();
 				return basicGetCreatedBy();
+			case GlucosePackage.CLINICAL_DECISION__DECISION_ID:
+				return getDecisionID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -735,6 +792,9 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 				return;
 			case GlucosePackage.CLINICAL_DECISION__CREATED_BY:
 				setCreatedBy((User)newValue);
+				return;
+			case GlucosePackage.CLINICAL_DECISION__DECISION_ID:
+				setDecisionID((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -790,6 +850,9 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 			case GlucosePackage.CLINICAL_DECISION__CREATED_BY:
 				setCreatedBy((User)null);
 				return;
+			case GlucosePackage.CLINICAL_DECISION__DECISION_ID:
+				setDecisionID(DECISION_ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -830,6 +893,8 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 				return minutesToNextEvaluation != MINUTES_TO_NEXT_EVALUATION_EDEFAULT;
 			case GlucosePackage.CLINICAL_DECISION__CREATED_BY:
 				return createdBy != null;
+			case GlucosePackage.CLINICAL_DECISION__DECISION_ID:
+				return DECISION_ID_EDEFAULT == null ? decisionID != null : !DECISION_ID_EDEFAULT.equals(decisionID);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -870,6 +935,8 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 		result.append(userAction);
 		result.append(", minutesToNextEvaluation: ");
 		result.append(minutesToNextEvaluation);
+		result.append(", decisionID: ");
+		result.append(decisionID);
 		result.append(')');
 		return result.toString();
 	}

@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link glucose.Person#getLastName <em>Last Name</em>}</li>
  *   <li>{@link glucose.Person#getFirstName <em>First Name</em>}</li>
+ *   <li>{@link glucose.Person#getPersonID <em>Person ID</em>}</li>
  * </ul>
  * </p>
  *
@@ -39,6 +40,7 @@ public interface Person extends EObject {
 	 * @see #setLastName(String)
 	 * @see glucose.GlucosePackage#getPerson_LastName()
 	 * @model default=""
+	 *        annotation="teneo.jpa appinfo='@Basic(optional=false)'"
 	 * @generated
 	 */
 	String getLastName();
@@ -78,6 +80,33 @@ public interface Person extends EObject {
 	 * @generated
 	 */
 	void setFirstName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Person ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Person ID</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Person ID</em>' attribute.
+	 * @see #setPersonID(String)
+	 * @see glucose.GlucosePackage#getPerson_PersonID()
+	 * @model id="true"
+	 *        annotation="teneo.jpa appinfo='@Id \n@GeneratedValue(generator=\"system-uuid\")\n'"
+	 * @generated
+	 */
+	String getPersonID();
+
+	/**
+	 * Sets the value of the '{@link glucose.Person#getPersonID <em>Person ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Person ID</em>' attribute.
+	 * @see #getPersonID()
+	 * @generated
+	 */
+	void setPersonID(String value);
 
 	/**
 	 * <!-- begin-user-doc -->

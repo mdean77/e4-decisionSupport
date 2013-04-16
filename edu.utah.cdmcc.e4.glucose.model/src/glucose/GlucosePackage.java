@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see glucose.GlucoseFactory
  * @model kind="package"
+ *        annotation="teneo.jpa appinfo='@GenericGenerator(name=\"system-uuid\", strategy = \"uuid\")'"
  * @generated
  */
 public interface GlucosePackage extends EPackage {
@@ -86,13 +87,22 @@ public interface GlucosePackage extends EPackage {
 	int PERSON__FIRST_NAME = 1;
 
 	/**
+	 * The feature id for the '<em><b>Person ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSON__PERSON_ID = 2;
+
+	/**
 	 * The number of structural features of the '<em>Person</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PERSON_FEATURE_COUNT = 2;
+	int PERSON_FEATURE_COUNT = 3;
 
 	/**
 	 * The meta object id for the '{@link glucose.impl.PatientImpl <em>Patient</em>}' class.
@@ -121,6 +131,15 @@ public interface GlucosePackage extends EPackage {
 	 * @ordered
 	 */
 	int PATIENT__FIRST_NAME = PERSON__FIRST_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Person ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PATIENT__PERSON_ID = PERSON__PERSON_ID;
 
 	/**
 	 * The feature id for the '<em><b>Weight</b></em>' attribute.
@@ -230,6 +249,15 @@ public interface GlucosePackage extends EPackage {
 	 * @ordered
 	 */
 	int USER__FIRST_NAME = PERSON__FIRST_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Person ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__PERSON_ID = PERSON__PERSON_ID;
 
 	/**
 	 * The feature id for the '<em><b>Account Rights</b></em>' attribute.
@@ -413,13 +441,22 @@ public interface GlucosePackage extends EPackage {
 	int CLINICAL_DECISION__CREATED_BY = 13;
 
 	/**
+	 * The feature id for the '<em><b>Decision ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLINICAL_DECISION__DECISION_ID = 14;
+
+	/**
 	 * The number of structural features of the '<em>Clinical Decision</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLINICAL_DECISION_FEATURE_COUNT = 14;
+	int CLINICAL_DECISION_FEATURE_COUNT = 15;
 
 	/**
 	 * The meta object id for the '{@link glucose.impl.GlucoseDecisionImpl <em>Decision</em>}' class.
@@ -556,6 +593,15 @@ public interface GlucosePackage extends EPackage {
 	 * @ordered
 	 */
 	int GLUCOSE_DECISION__CREATED_BY = CLINICAL_DECISION__CREATED_BY;
+
+	/**
+	 * The feature id for the '<em><b>Decision ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLUCOSE_DECISION__DECISION_ID = CLINICAL_DECISION__DECISION_ID;
 
 	/**
 	 * The feature id for the '<em><b>Previous Glucose Concentration</b></em>' attribute.
@@ -765,6 +811,17 @@ public interface GlucosePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPerson_FirstName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link glucose.Person#getPersonID <em>Person ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Person ID</em>'.
+	 * @see glucose.Person#getPersonID()
+	 * @see #getPerson()
+	 * @generated
+	 */
+	EAttribute getPerson_PersonID();
 
 	/**
 	 * Returns the meta object for class '{@link glucose.Patient <em>Patient</em>}'.
@@ -1083,6 +1140,17 @@ public interface GlucosePackage extends EPackage {
 	EReference getClinicalDecision_CreatedBy();
 
 	/**
+	 * Returns the meta object for the attribute '{@link glucose.ClinicalDecision#getDecisionID <em>Decision ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Decision ID</em>'.
+	 * @see glucose.ClinicalDecision#getDecisionID()
+	 * @see #getClinicalDecision()
+	 * @generated
+	 */
+	EAttribute getClinicalDecision_DecisionID();
+
+	/**
 	 * Returns the meta object for class '{@link glucose.GlucoseDecision <em>Decision</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1323,6 +1391,14 @@ public interface GlucosePackage extends EPackage {
 		EAttribute PERSON__FIRST_NAME = eINSTANCE.getPerson_FirstName();
 
 		/**
+		 * The meta object literal for the '<em><b>Person ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PERSON__PERSON_ID = eINSTANCE.getPerson_PersonID();
+
+		/**
 		 * The meta object literal for the '{@link glucose.impl.PatientImpl <em>Patient</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1559,6 +1635,14 @@ public interface GlucosePackage extends EPackage {
 		 * @generated
 		 */
 		EReference CLINICAL_DECISION__CREATED_BY = eINSTANCE.getClinicalDecision_CreatedBy();
+
+		/**
+		 * The meta object literal for the '<em><b>Decision ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CLINICAL_DECISION__DECISION_ID = eINSTANCE.getClinicalDecision_DecisionID();
 
 		/**
 		 * The meta object literal for the '{@link glucose.impl.GlucoseDecisionImpl <em>Decision</em>}' class.

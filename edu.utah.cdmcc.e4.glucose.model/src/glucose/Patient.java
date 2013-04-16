@@ -31,7 +31,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  *
  * @see glucose.GlucosePackage#getPatient()
- * @model
+ * @model annotation="teneo.jpa appinfo='import java.util.GregorianCalendar;'"
  * @generated
  */
 public interface Patient extends Person {
@@ -234,7 +234,7 @@ public interface Patient extends Person {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model kind="operation"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='java.text.DateFormat df = java.text.DateFormat.getDateInstance(java.text.DateFormat.LONG);\nreturn df.format(birthdate.getTime());'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%java.text.DateFormat%> df = DateFormat.getDateInstance(DateFormat.LONG);\nreturn df.format(birthdate.getTime());'"
 	 * @generated
 	 */
 	String getBirthdateString();
@@ -243,7 +243,7 @@ public interface Patient extends Person {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model kind="operation"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='return getDeltaAgeYears(new GregorianCalendar());'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='return getDeltaAgeYears(new <%java.util.GregorianCalendar%>());'"
 	 * @generated
 	 */
 	int getTodayAgeYears();
@@ -252,7 +252,7 @@ public interface Patient extends Person {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @model kind="operation"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='return getDeltaAgeDays(new GregorianCalendar());'"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='return getDeltaAgeDays(new <%java.util.GregorianCalendar%>());'"
 	 * @generated
 	 */
 	int getTodayAgeDays();

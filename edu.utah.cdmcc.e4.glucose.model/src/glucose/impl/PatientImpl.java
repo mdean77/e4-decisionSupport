@@ -9,6 +9,7 @@ import glucose.Patient;
 import glucose.StatusType;
 
 import glucose.User;
+import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.GregorianCalendar;
@@ -388,7 +389,7 @@ public class PatientImpl extends PersonImpl implements Patient {
 	 * @generated
 	 */
 	public String getBirthdateString() {
-		java.text.DateFormat df = java.text.DateFormat.getDateInstance(java.text.DateFormat.LONG);
+		DateFormat df = DateFormat.getDateInstance(DateFormat.LONG);
 		return df.format(birthdate.getTime());
 	}
 

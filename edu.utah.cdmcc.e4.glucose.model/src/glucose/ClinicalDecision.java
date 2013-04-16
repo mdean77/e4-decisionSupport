@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link glucose.ClinicalDecision#getUserAction <em>User Action</em>}</li>
  *   <li>{@link glucose.ClinicalDecision#getMinutesToNextEvaluation <em>Minutes To Next Evaluation</em>}</li>
  *   <li>{@link glucose.ClinicalDecision#getCreatedBy <em>Created By</em>}</li>
+ *   <li>{@link glucose.ClinicalDecision#getDecisionID <em>Decision ID</em>}</li>
  * </ul>
  * </p>
  *
@@ -403,5 +404,40 @@ public interface ClinicalDecision extends EObject {
 	 * @generated
 	 */
 	void setCreatedBy(User value);
+
+	/**
+	 * Returns the value of the '<em><b>Decision ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Decision ID</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Decision ID</em>' attribute.
+	 * @see #setDecisionID(String)
+	 * @see glucose.GlucosePackage#getClinicalDecision_DecisionID()
+	 * @model id="true"
+	 *        annotation="teneo.jpa appinfo='@Id \n@GeneratedValue(generator=\"system-uuid\")'"
+	 * @generated
+	 */
+	String getDecisionID();
+
+	/**
+	 * Sets the value of the '{@link glucose.ClinicalDecision#getDecisionID <em>Decision ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Decision ID</em>' attribute.
+	 * @see #getDecisionID()
+	 * @generated
+	 */
+	void setDecisionID(String value);
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model annotation="http://www.eclipse.org/emf/2002/GenModel body='if (this.getAdviceText().length() == 0)\n\t{\n\t\tthis.setAdviceText(message);\n\t} else \n\t{\n\tthis.setAdviceText(this.getAdviceText() + \"\\n\" + message);\n\t}'"
+	 * @generated
+	 */
+	void advise(String message);
 
 } // ClinicalDecision
