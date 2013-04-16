@@ -44,7 +44,7 @@
       </children>
       <children xsi:type="menu:Menu" xmi:id="_7ud5AJihEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.menu.2" label="Database">
         <children xsi:type="menu:DirectMenuItem" xmi:id="__zlUQJihEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.directmenuitem.0" label="Initialize Local Database (Destructive!)"/>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_AVXysJiiEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.directmenuitem.1" label="Add Fake Patients"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_XPMFUKaTEeKHhdQnjVuIpg" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.addFakePatients" label="Add Fake Data" command="_y170UKaSEeKHhdQnjVuIpg"/>
         <children xsi:type="menu:DirectMenuItem" xmi:id="_A14ewJiiEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.directmenuitem.2" label="Add User"/>
         <children xsi:type="menu:DirectMenuItem" xmi:id="_Baj5IJiiEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.directmenuitem.3" label="Transfer data to target database"/>
         <children xsi:type="menu:DirectMenuItem" xmi:id="_B8QQ8JiiEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.directmenuitem.4" label="Initialize Target Database (Destructive!)"/>
@@ -64,6 +64,7 @@
   <handlers xmi:id="_IjDC-JibEeKOPO56Fzh8Mw" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.handlers.OpenHandler" command="_IjDC95ibEeKOPO56Fzh8Mw"/>
   <handlers xmi:id="_IjDC-5ibEeKOPO56Fzh8Mw" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.handlers.SaveHandler" command="_IjDC-pibEeKOPO56Fzh8Mw"/>
   <handlers xmi:id="_IjDC_pibEeKOPO56Fzh8Mw" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.handlers.AboutHandler" command="_IjDC_ZibEeKOPO56Fzh8Mw"/>
+  <handlers xmi:id="_3AFgkKaSEeKHhdQnjVuIpg" elementId="" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.handlers.FakeDataHandler" command="_y170UKaSEeKHhdQnjVuIpg"/>
   <bindingTables xmi:id="_IjDC9ZibEeKOPO56Fzh8Mw" bindingContext="_IjDC8JibEeKOPO56Fzh8Mw">
     <bindings xmi:id="_IjDC9pibEeKOPO56Fzh8Mw" keySequence="M1+Q" command="_IjDC85ibEeKOPO56Fzh8Mw"/>
     <bindings xmi:id="_IjDC-ZibEeKOPO56Fzh8Mw" keySequence="M1+O" command="_IjDC95ibEeKOPO56Fzh8Mw"/>
@@ -78,6 +79,7 @@
   <commands xmi:id="_IjDC95ibEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.open" commandName="openCommand"/>
   <commands xmi:id="_IjDC-pibEeKOPO56Fzh8Mw" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
   <commands xmi:id="_IjDC_ZibEeKOPO56Fzh8Mw" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <commands xmi:id="_y170UKaSEeKHhdQnjVuIpg" elementId="edu.utah.cdmcc.e4.glucose.application.command.addFakeData" commandName="fakeDataCommand" description="Command to create fake data"/>
   <addons xmi:id="_IjCb4pibEeKOPO56Fzh8Mw" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_IjCb45ibEeKOPO56Fzh8Mw" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_IjCb5JibEeKOPO56Fzh8Mw" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
