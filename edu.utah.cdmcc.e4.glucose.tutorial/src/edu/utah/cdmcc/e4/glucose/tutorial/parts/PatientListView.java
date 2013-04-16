@@ -15,7 +15,7 @@ import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.swt.widgets.Composite;
 
-import edu.utah.cdmcc.glucose.tutorial.services.IntensiveCareUnitService;
+import glucose.IntensiveCareUnitService;
 import glucose.provider.GlucoseItemProviderAdapterFactory;
 
 public class PatientListView {

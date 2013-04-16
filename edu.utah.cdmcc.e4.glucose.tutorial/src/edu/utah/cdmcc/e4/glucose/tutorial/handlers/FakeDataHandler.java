@@ -5,10 +5,10 @@ import java.util.GregorianCalendar;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
-import edu.utah.cdmcc.glucose.tutorial.services.IntensiveCareUnitService;
 import glucose.GlucoseDecision;
 import glucose.GlucoseFactory;
 import glucose.IntensiveCareUnit;
+import glucose.IntensiveCareUnitService;
 import glucose.Patient;
 import glucose.Person;
 import glucose.StatusType;
