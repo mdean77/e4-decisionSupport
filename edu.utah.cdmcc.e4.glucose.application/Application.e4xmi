@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_IjCb4JibEeKOPO56Fzh8Mw" elementId="org.eclipse.e4.ide.application" bindingContexts="_IjDC8JibEeKOPO56Fzh8Mw">
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_IjCb4ZibEeKOPO56Fzh8Mw" label="edu.utah.cdmcc.e4.glucose.application" x="0" y="0" width="1200" height="800">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_IjCb4ZibEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.mainWindow" label="Glucose Decision Support" x="0" y="0" width="1200" height="800">
     <children xsi:type="advanced:PerspectiveStack" xmi:id="_IjDqBJibEeKOPO56Fzh8Mw">
       <children xsi:type="advanced:Perspective" xmi:id="_IjDqBZibEeKOPO56Fzh8Mw">
         <children xsi:type="basic:PartSashContainer" xmi:id="_IjDqBpibEeKOPO56Fzh8Mw" horizontal="true">
@@ -30,26 +30,26 @@
       </children>
     </children>
     <mainMenu xmi:id="_IjDDAJibEeKOPO56Fzh8Mw" elementId="menu:org.eclipse.ui.main.menu">
-      <children xsi:type="menu:Menu" xmi:id="_IjDDAZibEeKOPO56Fzh8Mw" label="File">
+      <children xsi:type="menu:Menu" xmi:id="_IjDDAZibEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.menu.file" label="File">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_IjDDApibEeKOPO56Fzh8Mw" label="Open" iconURI="platform:/plugin/edu.utah.cdmcc.e4.glucose.application/icons/sample.gif" command="_IjDC95ibEeKOPO56Fzh8Mw"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_IjDqAJibEeKOPO56Fzh8Mw" label="Save" iconURI="platform:/plugin/edu.utah.cdmcc.e4.glucose.application/icons/save_edit.gif" command="_IjDC-pibEeKOPO56Fzh8Mw"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_IjDqAZibEeKOPO56Fzh8Mw" label="Quit" command="_IjDC85ibEeKOPO56Fzh8Mw"/>
       </children>
-      <children xsi:type="menu:Menu" xmi:id="_3bSMkJihEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.menu.0" label="Edit">
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_sLO_MJiiEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.0" label="Select Active Patient"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_sq4voJiiEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.1" label="Update (edit) patient data"/>
+      <children xsi:type="menu:Menu" xmi:id="_3bSMkJihEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.menu.edit" label="Edit">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_sLO_MJiiEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.selectPatient" label="Select Active Patient" command="_UQCEEKgpEeK9o9csjlG7UQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_sq4voJiiEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.editPatient" label="Update (edit) patient data" command="_bkVYIKgpEeK9o9csjlG7UQ"/>
       </children>
-      <children xsi:type="menu:Menu" xmi:id="_5U710JihEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.menu.1" label="Decision">
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_xMc2UJiiEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.2" label="Show trace window"/>
+      <children xsi:type="menu:Menu" xmi:id="_5U710JihEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.menu.decision" label="Decision">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_xMc2UJiiEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.showTrace" label="Show trace window" command="_gha9MKgpEeK9o9csjlG7UQ"/>
       </children>
-      <children xsi:type="menu:Menu" xmi:id="_7ud5AJihEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.menu.2" label="Database">
-        <children xsi:type="menu:DirectMenuItem" xmi:id="__zlUQJihEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.directmenuitem.0" label="Initialize Local Database (Destructive!)"/>
+      <children xsi:type="menu:Menu" xmi:id="_7ud5AJihEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.menu.database" label="Database">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_yVR10KgoEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.0" label="Initialize Local Database (Destructive)" command="_loYP8KgpEeK9o9csjlG7UQ"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_XPMFUKaTEeKHhdQnjVuIpg" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.addFakePatients" label="Add Fake Data" command="_y170UKaSEeKHhdQnjVuIpg"/>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_A14ewJiiEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.directmenuitem.2" label="Add User"/>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_Baj5IJiiEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.directmenuitem.3" label="Transfer data to target database"/>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_B8QQ8JiiEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.directmenuitem.4" label="Initialize Target Database (Destructive!)"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_84xpwKgoEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.addUser" label="Add User" command="_mST9wKgpEeK9o9csjlG7UQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_91JLYKgoEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.transferToTarget" label="Transfer Data to Target Database" command="_mwBNcKgpEeK9o9csjlG7UQ"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_Edy6YKgpEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.initializeTarget" label="Initialize Target Database (Destructive)" command="_nSqAcKgpEeK9o9csjlG7UQ"/>
       </children>
-      <children xsi:type="menu:Menu" xmi:id="_IjDqApibEeKOPO56Fzh8Mw" label="Help">
+      <children xsi:type="menu:Menu" xmi:id="_IjDqApibEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.menu.help" label="Help">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_IjDqA5ibEeKOPO56Fzh8Mw" label="About" command="_IjDC_ZibEeKOPO56Fzh8Mw"/>
       </children>
     </mainMenu>
@@ -80,6 +80,13 @@
   <commands xmi:id="_IjDC-pibEeKOPO56Fzh8Mw" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
   <commands xmi:id="_IjDC_ZibEeKOPO56Fzh8Mw" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
   <commands xmi:id="_y170UKaSEeKHhdQnjVuIpg" elementId="edu.utah.cdmcc.e4.glucose.application.command.addFakeData" commandName="fakeDataCommand" description="Command to create fake data"/>
+  <commands xmi:id="_UQCEEKgpEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.command.selectPatient" commandName="selectPatientCommand" description="Select active patient"/>
+  <commands xmi:id="_bkVYIKgpEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.command.updatePatient" commandName="updatePatientCommand" description="Update Patient Information"/>
+  <commands xmi:id="_gha9MKgpEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.command.showTrace" commandName="showTraceCommand" description="Show the rule trace window"/>
+  <commands xmi:id="_loYP8KgpEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.command.initializeLocal" commandName="initializeLocalDatabaseCommand" description="Initialize the local database"/>
+  <commands xmi:id="_mST9wKgpEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.command.addUser" commandName="addUserCommand" description="Add new user"/>
+  <commands xmi:id="_mwBNcKgpEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.command.transferData" commandName="transferDataCommand" description="Transfer data from local database to the target"/>
+  <commands xmi:id="_nSqAcKgpEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.command.initializeTarget" commandName="initializeTargetCommand" description="Initialize the target database"/>
   <addons xmi:id="_IjCb4pibEeKOPO56Fzh8Mw" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_IjCb45ibEeKOPO56Fzh8Mw" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_IjCb5JibEeKOPO56Fzh8Mw" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
