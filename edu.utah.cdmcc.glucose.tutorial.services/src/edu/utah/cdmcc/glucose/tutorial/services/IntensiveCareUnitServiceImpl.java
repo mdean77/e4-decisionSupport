@@ -11,7 +11,9 @@ public class IntensiveCareUnitServiceImpl implements IntensiveCareUnitService {
 	IntensiveCareUnit icu = GlucoseFactory.eINSTANCE.createIntensiveCareUnit();
 	
 	@Override
-	public IntensiveCareUnit getRootGroup() {		
+	public IntensiveCareUnit getRootGroup() {
+		System.out.println("Inside implementation of ICU service");
+		System.out.println(icu);
 		return icu;
 	}
 	
