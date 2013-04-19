@@ -24,7 +24,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link glucose.Patient#getStudyID <em>Study ID</em>}</li>
  *   <li>{@link glucose.Patient#getBirthdate <em>Birthdate</em>}</li>
  *   <li>{@link glucose.Patient#getHeight <em>Height</em>}</li>
- *   <li>{@link glucose.Patient#getStatus <em>Status</em>}</li>
  *   <li>{@link glucose.Patient#getDecisions <em>Decisions</em>}</li>
  *   <li>{@link glucose.Patient#getCreatedBy <em>Created By</em>}</li>
  * </ul>
@@ -159,34 +158,6 @@ public interface Patient extends Person {
 	 * @generated
 	 */
 	void setHeight(Double value);
-
-	/**
-	 * Returns the value of the '<em><b>Status</b></em>' attribute.
-	 * The literals are from the enumeration {@link glucose.StatusType}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * <!-- begin-model-doc -->
-	 * Status of the patient.
-	 * <!-- end-model-doc -->
-	 * @return the value of the '<em>Status</em>' attribute.
-	 * @see glucose.StatusType
-	 * @see #setStatus(StatusType)
-	 * @see glucose.GlucosePackage#getPatient_Status()
-	 * @model
-	 * @generated
-	 */
-	StatusType getStatus();
-
-	/**
-	 * Sets the value of the '{@link glucose.Patient#getStatus <em>Status</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Status</em>' attribute.
-	 * @see glucose.StatusType
-	 * @see #getStatus()
-	 * @generated
-	 */
-	void setStatus(StatusType value);
 
 	/**
 	 * Returns the value of the '<em><b>Decisions</b></em>' containment reference list.

@@ -5,6 +5,7 @@ package glucose.impl;
 import glucose.GlucosePackage;
 import glucose.Person;
 
+import glucose.StatusType;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -22,6 +23,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link glucose.impl.PersonImpl#getLastName <em>Last Name</em>}</li>
  *   <li>{@link glucose.impl.PersonImpl#getFirstName <em>First Name</em>}</li>
  *   <li>{@link glucose.impl.PersonImpl#getPersonID <em>Person ID</em>}</li>
+ *   <li>{@link glucose.impl.PersonImpl#getStatus <em>Status</em>}</li>
  * </ul>
  * </p>
  *
@@ -87,6 +89,26 @@ public class PersonImpl extends EObjectImpl implements Person {
 	 * @ordered
 	 */
 	protected String personID = PERSON_ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStatus()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final StatusType STATUS_EDEFAULT = StatusType.CURRENT;
+
+	/**
+	 * The cached value of the '{@link #getStatus() <em>Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStatus()
+	 * @generated
+	 * @ordered
+	 */
+	protected StatusType status = STATUS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,6 +197,27 @@ public class PersonImpl extends EObjectImpl implements Person {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public StatusType getStatus() {
+		return status;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStatus(StatusType newStatus) {
+		StatusType oldStatus = status;
+		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GlucosePackage.PERSON__STATUS, oldStatus, status));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getName() {
 		return getLastName().trim() + ", " + getFirstName().trim();
 	}
@@ -193,6 +236,8 @@ public class PersonImpl extends EObjectImpl implements Person {
 				return getFirstName();
 			case GlucosePackage.PERSON__PERSON_ID:
 				return getPersonID();
+			case GlucosePackage.PERSON__STATUS:
+				return getStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -213,6 +258,9 @@ public class PersonImpl extends EObjectImpl implements Person {
 				return;
 			case GlucosePackage.PERSON__PERSON_ID:
 				setPersonID((String)newValue);
+				return;
+			case GlucosePackage.PERSON__STATUS:
+				setStatus((StatusType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -235,6 +283,9 @@ public class PersonImpl extends EObjectImpl implements Person {
 			case GlucosePackage.PERSON__PERSON_ID:
 				setPersonID(PERSON_ID_EDEFAULT);
 				return;
+			case GlucosePackage.PERSON__STATUS:
+				setStatus(STATUS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -253,6 +304,8 @@ public class PersonImpl extends EObjectImpl implements Person {
 				return FIRST_NAME_EDEFAULT == null ? firstName != null : !FIRST_NAME_EDEFAULT.equals(firstName);
 			case GlucosePackage.PERSON__PERSON_ID:
 				return PERSON_ID_EDEFAULT == null ? personID != null : !PERSON_ID_EDEFAULT.equals(personID);
+			case GlucosePackage.PERSON__STATUS:
+				return status != STATUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -273,6 +326,8 @@ public class PersonImpl extends EObjectImpl implements Person {
 		result.append(firstName);
 		result.append(", personID: ");
 		result.append(personID);
+		result.append(", status: ");
+		result.append(status);
 		result.append(')');
 		return result.toString();
 	}

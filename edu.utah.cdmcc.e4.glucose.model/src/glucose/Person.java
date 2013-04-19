@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link glucose.Person#getLastName <em>Last Name</em>}</li>
  *   <li>{@link glucose.Person#getFirstName <em>First Name</em>}</li>
  *   <li>{@link glucose.Person#getPersonID <em>Person ID</em>}</li>
+ *   <li>{@link glucose.Person#getStatus <em>Status</em>}</li>
  * </ul>
  * </p>
  *
@@ -107,6 +108,35 @@ public interface Person extends EObject {
 	 * @generated
 	 */
 	void setPersonID(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Status</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
+	 * The literals are from the enumeration {@link glucose.StatusType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Status of the person record.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Status</em>' attribute.
+	 * @see glucose.StatusType
+	 * @see #setStatus(StatusType)
+	 * @see glucose.GlucosePackage#getPerson_Status()
+	 * @model default="0"
+	 * @generated
+	 */
+	StatusType getStatus();
+
+	/**
+	 * Sets the value of the '{@link glucose.Person#getStatus <em>Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Status</em>' attribute.
+	 * @see glucose.StatusType
+	 * @see #getStatus()
+	 * @generated
+	 */
+	void setStatus(StatusType value);
 
 	/**
 	 * <!-- begin-user-doc -->

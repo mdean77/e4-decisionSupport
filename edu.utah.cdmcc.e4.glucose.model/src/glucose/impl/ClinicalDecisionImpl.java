@@ -4,6 +4,7 @@ package glucose.impl;
 
 import glucose.ClinicalDecision;
 import glucose.GlucosePackage;
+import glucose.StatusType;
 import glucose.User;
 import glucose.UserActionType;
 
@@ -40,6 +41,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *   <li>{@link glucose.impl.ClinicalDecisionImpl#getMinutesToNextEvaluation <em>Minutes To Next Evaluation</em>}</li>
  *   <li>{@link glucose.impl.ClinicalDecisionImpl#getCreatedBy <em>Created By</em>}</li>
  *   <li>{@link glucose.impl.ClinicalDecisionImpl#getDecisionID <em>Decision ID</em>}</li>
+ *   <li>{@link glucose.impl.ClinicalDecisionImpl#getStatus <em>Status</em>}</li>
  * </ul>
  * </p>
  *
@@ -335,6 +337,26 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 	 * @ordered
 	 */
 	protected String decisionID = DECISION_ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStatus()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final StatusType STATUS_EDEFAULT = StatusType.CURRENT;
+
+	/**
+	 * The cached value of the '{@link #getStatus() <em>Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStatus()
+	 * @generated
+	 * @ordered
+	 */
+	protected StatusType status = STATUS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -692,6 +714,27 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public StatusType getStatus() {
+		return status;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStatus(StatusType newStatus) {
+		StatusType oldStatus = status;
+		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GlucosePackage.CLINICAL_DECISION__STATUS, oldStatus, status));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public void advise(String message) {
 		if (this.getAdviceText().length() == 0) {
 				this.setAdviceText(message);
@@ -739,6 +782,8 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 				return basicGetCreatedBy();
 			case GlucosePackage.CLINICAL_DECISION__DECISION_ID:
 				return getDecisionID();
+			case GlucosePackage.CLINICAL_DECISION__STATUS:
+				return getStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -795,6 +840,9 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 				return;
 			case GlucosePackage.CLINICAL_DECISION__DECISION_ID:
 				setDecisionID((String)newValue);
+				return;
+			case GlucosePackage.CLINICAL_DECISION__STATUS:
+				setStatus((StatusType)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -853,6 +901,9 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 			case GlucosePackage.CLINICAL_DECISION__DECISION_ID:
 				setDecisionID(DECISION_ID_EDEFAULT);
 				return;
+			case GlucosePackage.CLINICAL_DECISION__STATUS:
+				setStatus(STATUS_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -895,6 +946,8 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 				return createdBy != null;
 			case GlucosePackage.CLINICAL_DECISION__DECISION_ID:
 				return DECISION_ID_EDEFAULT == null ? decisionID != null : !DECISION_ID_EDEFAULT.equals(decisionID);
+			case GlucosePackage.CLINICAL_DECISION__STATUS:
+				return status != STATUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -937,6 +990,8 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 		result.append(minutesToNextEvaluation);
 		result.append(", decisionID: ");
 		result.append(decisionID);
+		result.append(", status: ");
+		result.append(status);
 		result.append(')');
 		return result.toString();
 	}

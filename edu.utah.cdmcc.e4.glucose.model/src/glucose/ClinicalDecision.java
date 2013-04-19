@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link glucose.ClinicalDecision#getMinutesToNextEvaluation <em>Minutes To Next Evaluation</em>}</li>
  *   <li>{@link glucose.ClinicalDecision#getCreatedBy <em>Created By</em>}</li>
  *   <li>{@link glucose.ClinicalDecision#getDecisionID <em>Decision ID</em>}</li>
+ *   <li>{@link glucose.ClinicalDecision#getStatus <em>Status</em>}</li>
  * </ul>
  * </p>
  *
@@ -431,6 +432,36 @@ public interface ClinicalDecision extends EObject {
 	 * @generated
 	 */
 	void setDecisionID(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Status</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
+	 * The literals are from the enumeration {@link glucose.StatusType}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Status</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Status</em>' attribute.
+	 * @see glucose.StatusType
+	 * @see #setStatus(StatusType)
+	 * @see glucose.GlucosePackage#getClinicalDecision_Status()
+	 * @model default="0"
+	 * @generated
+	 */
+	StatusType getStatus();
+
+	/**
+	 * Sets the value of the '{@link glucose.ClinicalDecision#getStatus <em>Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Status</em>' attribute.
+	 * @see glucose.StatusType
+	 * @see #getStatus()
+	 * @generated
+	 */
+	void setStatus(StatusType value);
 
 	/**
 	 * <!-- begin-user-doc -->

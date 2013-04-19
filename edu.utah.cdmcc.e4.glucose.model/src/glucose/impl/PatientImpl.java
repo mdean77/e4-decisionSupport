@@ -39,7 +39,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link glucose.impl.PatientImpl#getStudyID <em>Study ID</em>}</li>
  *   <li>{@link glucose.impl.PatientImpl#getBirthdate <em>Birthdate</em>}</li>
  *   <li>{@link glucose.impl.PatientImpl#getHeight <em>Height</em>}</li>
- *   <li>{@link glucose.impl.PatientImpl#getStatus <em>Status</em>}</li>
  *   <li>{@link glucose.impl.PatientImpl#getDecisions <em>Decisions</em>}</li>
  *   <li>{@link glucose.impl.PatientImpl#getCreatedBy <em>Created By</em>}</li>
  * </ul>
@@ -147,26 +146,6 @@ public class PatientImpl extends PersonImpl implements Patient {
 	 * @ordered
 	 */
 	protected Double height = HEIGHT_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStatus() <em>Status</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStatus()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final StatusType STATUS_EDEFAULT = StatusType.CURRENT;
-
-	/**
-	 * The cached value of the '{@link #getStatus() <em>Status</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStatus()
-	 * @generated
-	 * @ordered
-	 */
-	protected StatusType status = STATUS_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getDecisions() <em>Decisions</em>}' containment reference list.
@@ -317,27 +296,6 @@ public class PatientImpl extends PersonImpl implements Patient {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StatusType getStatus() {
-		return status;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setStatus(StatusType newStatus) {
-		StatusType oldStatus = status;
-		status = newStatus == null ? STATUS_EDEFAULT : newStatus;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GlucosePackage.PATIENT__STATUS, oldStatus, status));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<GlucoseDecision> getDecisions() {
 		if (decisions == null) {
 			decisions = new EObjectContainmentEList<GlucoseDecision>(GlucoseDecision.class, this, GlucosePackage.PATIENT__DECISIONS);
@@ -465,8 +423,6 @@ public class PatientImpl extends PersonImpl implements Patient {
 				return getBirthdate();
 			case GlucosePackage.PATIENT__HEIGHT:
 				return getHeight();
-			case GlucosePackage.PATIENT__STATUS:
-				return getStatus();
 			case GlucosePackage.PATIENT__DECISIONS:
 				return getDecisions();
 			case GlucosePackage.PATIENT__CREATED_BY:
@@ -499,9 +455,6 @@ public class PatientImpl extends PersonImpl implements Patient {
 				return;
 			case GlucosePackage.PATIENT__HEIGHT:
 				setHeight((Double)newValue);
-				return;
-			case GlucosePackage.PATIENT__STATUS:
-				setStatus((StatusType)newValue);
 				return;
 			case GlucosePackage.PATIENT__DECISIONS:
 				getDecisions().clear();
@@ -537,9 +490,6 @@ public class PatientImpl extends PersonImpl implements Patient {
 			case GlucosePackage.PATIENT__HEIGHT:
 				setHeight(HEIGHT_EDEFAULT);
 				return;
-			case GlucosePackage.PATIENT__STATUS:
-				setStatus(STATUS_EDEFAULT);
-				return;
 			case GlucosePackage.PATIENT__DECISIONS:
 				getDecisions().clear();
 				return;
@@ -568,8 +518,6 @@ public class PatientImpl extends PersonImpl implements Patient {
 				return BIRTHDATE_EDEFAULT == null ? birthdate != null : !BIRTHDATE_EDEFAULT.equals(birthdate);
 			case GlucosePackage.PATIENT__HEIGHT:
 				return HEIGHT_EDEFAULT == null ? height != null : !HEIGHT_EDEFAULT.equals(height);
-			case GlucosePackage.PATIENT__STATUS:
-				return status != STATUS_EDEFAULT;
 			case GlucosePackage.PATIENT__DECISIONS:
 				return decisions != null && !decisions.isEmpty();
 			case GlucosePackage.PATIENT__CREATED_BY:
@@ -598,8 +546,6 @@ public class PatientImpl extends PersonImpl implements Patient {
 		result.append(birthdate);
 		result.append(", height: ");
 		result.append(height);
-		result.append(", status: ");
-		result.append(status);
 		result.append(')');
 		return result.toString();
 	}

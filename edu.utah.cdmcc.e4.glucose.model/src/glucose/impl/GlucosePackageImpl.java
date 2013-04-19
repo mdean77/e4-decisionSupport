@@ -216,6 +216,15 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getPerson_Status() {
+		return (EAttribute)personEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPatient() {
 		return patientEClass;
 	}
@@ -270,17 +279,8 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPatient_Status() {
-		return (EAttribute)patientEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getPatient_Decisions() {
-		return (EReference)patientEClass.getEStructuralFeatures().get(6);
+		return (EReference)patientEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -289,7 +289,7 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 	 * @generated
 	 */
 	public EReference getPatient_CreatedBy() {
-		return (EReference)patientEClass.getEStructuralFeatures().get(7);
+		return (EReference)patientEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -486,6 +486,15 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getClinicalDecision_Status() {
+		return (EAttribute)clinicalDecisionEClass.getEStructuralFeatures().get(15);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getGlucoseDecision() {
 		return glucoseDecisionEClass;
 	}
@@ -675,6 +684,7 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 		createEAttribute(personEClass, PERSON__LAST_NAME);
 		createEAttribute(personEClass, PERSON__FIRST_NAME);
 		createEAttribute(personEClass, PERSON__PERSON_ID);
+		createEAttribute(personEClass, PERSON__STATUS);
 
 		patientEClass = createEClass(PATIENT);
 		createEAttribute(patientEClass, PATIENT__WEIGHT);
@@ -682,7 +692,6 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 		createEAttribute(patientEClass, PATIENT__STUDY_ID);
 		createEAttribute(patientEClass, PATIENT__BIRTHDATE);
 		createEAttribute(patientEClass, PATIENT__HEIGHT);
-		createEAttribute(patientEClass, PATIENT__STATUS);
 		createEReference(patientEClass, PATIENT__DECISIONS);
 		createEReference(patientEClass, PATIENT__CREATED_BY);
 
@@ -708,6 +717,7 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 		createEAttribute(clinicalDecisionEClass, CLINICAL_DECISION__MINUTES_TO_NEXT_EVALUATION);
 		createEReference(clinicalDecisionEClass, CLINICAL_DECISION__CREATED_BY);
 		createEAttribute(clinicalDecisionEClass, CLINICAL_DECISION__DECISION_ID);
+		createEAttribute(clinicalDecisionEClass, CLINICAL_DECISION__STATUS);
 
 		glucoseDecisionEClass = createEClass(GLUCOSE_DECISION);
 		createEAttribute(glucoseDecisionEClass, GLUCOSE_DECISION__PREVIOUS_GLUCOSE_CONCENTRATION);
@@ -771,6 +781,7 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 		initEAttribute(getPerson_LastName(), ecorePackage.getEString(), "lastName", "", 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPerson_FirstName(), ecorePackage.getEString(), "firstName", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPerson_PersonID(), ecorePackage.getEString(), "personID", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPerson_Status(), this.getStatusType(), "status", "0", 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		addEOperation(personEClass, ecorePackage.getEString(), "getName", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -780,7 +791,6 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 		initEAttribute(getPatient_StudyID(), ecorePackage.getEString(), "studyID", null, 0, 1, Patient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPatient_Birthdate(), this.getcalendar(), "birthdate", null, 0, 1, Patient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPatient_Height(), ecorePackage.getEDoubleObject(), "height", null, 0, 1, Patient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPatient_Status(), this.getStatusType(), "status", null, 0, 1, Patient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPatient_Decisions(), this.getGlucoseDecision(), null, "decisions", null, 0, -1, Patient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getPatient_Decisions().getEKeys().add(this.getClinicalDecision_ObservationDate());
 		getPatient_Decisions().getEKeys().add(this.getClinicalDecision_UserAction());
@@ -820,6 +830,7 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 		initEAttribute(getClinicalDecision_MinutesToNextEvaluation(), ecorePackage.getEInt(), "minutesToNextEvaluation", null, 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getClinicalDecision_CreatedBy(), this.getUser(), null, "createdBy", null, 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClinicalDecision_DecisionID(), ecorePackage.getEString(), "decisionID", null, 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClinicalDecision_Status(), this.getStatusType(), "status", "0", 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		op = addEOperation(clinicalDecisionEClass, null, "advise", 0, 1, IS_UNIQUE, IS_ORDERED);
 		addEParameter(op, ecorePackage.getEString(), "message", 0, 1, IS_UNIQUE, IS_ORDERED);
@@ -903,13 +914,13 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 		   source, 
 		   new String[] {
 			 "appinfo", "@Id \n@GeneratedValue(generator=\"system-uuid\")\n"
-		   });			
+		   });				
 		addAnnotation
 		  (patientEClass, 
 		   source, 
 		   new String[] {
 			 "appinfo", "import java.util.GregorianCalendar;"
-		   });																				
+		   });																			
 		addAnnotation
 		  (getClinicalDecision_DecisionID(), 
 		   source, 
