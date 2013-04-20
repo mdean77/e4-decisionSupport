@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="glucose" nsURI="http://edu/utah/cdmcc/glucose" nsPrefix="edu.utah.cdmcc">
   <eAnnotations source="teneo.jpa">
-    <details key="appinfo" value="@GenericGenerator(name=&quot;system-uuid&quot;, strategy = &quot;uuid&quot;)"/>
+    <details key="appinfo" value="@GenericGenerator(name=&quot;system-uuid&quot;, strategy = &quot;uuid2&quot;)"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Person">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -36,9 +36,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Patient" eSuperTypes="#//Person">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Patient object represents a patient in the intensive care unit."/>
-    </eAnnotations>
-    <eAnnotations source="teneo.jpa">
-      <details key="appinfo" value="import java.util.GregorianCalendar;"/>
     </eAnnotations>
     <eOperations name="getBirthdateString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -93,7 +90,8 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="decisions" upperBound="-1"
-        eType="#//GlucoseDecision" containment="true" eKeys="#//ClinicalDecision/observationDate #//ClinicalDecision/userAction"/>
+        eType="#//GlucoseDecision" containment="true" eOpposite="#//GlucoseDecision/patient"
+        eKeys="#//ClinicalDecision/observationDate #//ClinicalDecision/userAction"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="createdBy" eType="#//User"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="User" eSuperTypes="#//Person">
@@ -211,6 +209,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="recommendedGlucoseBolus"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDoubleObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="insulinMode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="patient" lowerBound="1"
+        eType="#//Patient" eOpposite="#//Patient/decisions"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IntensiveCareUnit">
     <eStructuralFeatures xsi:type="ecore:EReference" name="patients" upperBound="-1"

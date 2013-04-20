@@ -4,8 +4,8 @@ package glucose.impl;
 
 import glucose.GlucosePackage;
 import glucose.Person;
-
 import glucose.StatusType;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;

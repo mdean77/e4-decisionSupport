@@ -5,9 +5,6 @@ package glucose.impl;
 import glucose.*;
 
 import java.util.Calendar;
-import java.text.DateFormat;
-
-import java.util.GregorianCalendar;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -296,27 +293,5 @@ public class GlucoseFactoryImpl extends EFactoryImpl implements GlucoseFactory {
 	public static GlucosePackage getPackage() {
 		return GlucosePackage.eINSTANCE;
 	}
-
-//	@Override
-//	public IntensiveCareUnit createExampleGlucoseModel() {
-//		IntensiveCareUnit icu = GlucoseFactory.eINSTANCE.createIntensiveCareUnit();
-//		Patient patient1 = GlucoseFactory.eINSTANCE.createPatient();
-//		icu.getPatients().add(patient1);
-//		User user1 = GlucoseFactory.eINSTANCE.createUser();
-//		icu.getUsers().add(user1);
-//		Patient patient2 = GlucoseFactory.eINSTANCE.createPatient();
-//		icu.getPatients().add(patient2);
-//		User user2 = GlucoseFactory.eINSTANCE.createUser();
-//		icu.getUsers().add(user2);
-//		GlucoseDecision decision1 = GlucoseFactory.eINSTANCE.createGlucoseDecision();
-//		GlucoseDecision decision2 = GlucoseFactory.eINSTANCE.createGlucoseDecision();
-//		GlucoseDecision decision3 = GlucoseFactory.eINSTANCE.createGlucoseDecision();
-//		GlucoseDecision decision4 = GlucoseFactory.eINSTANCE.createGlucoseDecision();
-//		patient1.getDecisions().add(decision1);
-//		patient2.getDecisions().add(decision2);
-//		patient1.getDecisions().add(decision3);
-//		patient1.getDecisions().add(decision4);
-//		return icu;
-//	}
 
 } //GlucoseFactoryImpl

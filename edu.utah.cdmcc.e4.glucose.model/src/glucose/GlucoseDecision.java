@@ -3,7 +3,6 @@
 package glucose;
 
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 /**
  * <!-- begin-user-doc -->

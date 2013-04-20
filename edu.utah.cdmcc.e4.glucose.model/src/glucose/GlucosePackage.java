@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see glucose.GlucoseFactory
  * @model kind="package"
- *        annotation="teneo.jpa appinfo='@GenericGenerator(name=\"system-uuid\", strategy = \"uuid\")'"
+ *        annotation="teneo.jpa appinfo='@GenericGenerator(name=\"system-uuid\", strategy = \"uuid2\")'"
  * @generated
  */
 public interface GlucosePackage extends EPackage {
@@ -815,6 +815,7 @@ public interface GlucosePackage extends EPackage {
 	 * @generated
 	 */
 	int CALENDAR = 10;
+
 
 	/**
 	 * Returns the meta object for class '{@link glucose.Person <em>Person</em>}'.

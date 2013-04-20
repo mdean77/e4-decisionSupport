@@ -49,7 +49,9 @@ public enum StatusType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INVALID(2, "Invalid", "Invalid"), /**
+	INVALID(2, "Invalid", "Invalid"),
+
+	/**
 	 * The '<em><b>Sample</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

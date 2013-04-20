@@ -7,7 +7,6 @@ import glucose.GlucoseDecision;
 import glucose.GlucosePackage;
 
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 import org.eclipse.emf.common.notify.Notification;
 

@@ -16,9 +16,6 @@ import glucose.User;
 import glucose.UserActionType;
 
 import java.util.Calendar;
-import java.text.DateFormat;
-
-import java.util.GregorianCalendar;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -901,7 +898,7 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 		  (this, 
 		   source, 
 		   new String[] {
-			 "appinfo", "@GenericGenerator(name=\"system-uuid\", strategy = \"uuid\")"
+			 "appinfo", "@GenericGenerator(name=\"system-uuid\", strategy = \"uuid2\")"
 		   });				
 		addAnnotation
 		  (getPerson_LastName(), 
@@ -914,13 +911,7 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 		   source, 
 		   new String[] {
 			 "appinfo", "@Id \n@GeneratedValue(generator=\"system-uuid\")\n"
-		   });				
-		addAnnotation
-		  (patientEClass, 
-		   source, 
-		   new String[] {
-			 "appinfo", "import java.util.GregorianCalendar;"
-		   });																			
+		   });																					
 		addAnnotation
 		  (getClinicalDecision_DecisionID(), 
 		   source, 

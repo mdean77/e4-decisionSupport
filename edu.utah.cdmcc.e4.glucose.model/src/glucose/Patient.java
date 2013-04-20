@@ -3,7 +3,6 @@
 package glucose;
 
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -30,7 +29,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  *
  * @see glucose.GlucosePackage#getPatient()
- * @model annotation="teneo.jpa appinfo='import java.util.GregorianCalendar;'"
+ * @model
  * @generated
  */
 public interface Patient extends Person {

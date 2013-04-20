@@ -3,13 +3,12 @@
 package glucose.impl;
 
 import glucose.GlucoseDecision;
-import glucose.GlucoseFactory;
 import glucose.GlucosePackage;
 import glucose.Patient;
-import glucose.StatusType;
-
 import glucose.User;
+
 import java.text.DateFormat;
+
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.GregorianCalendar;

@@ -3,7 +3,6 @@
 package glucose;
 
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 
 import org.eclipse.emf.ecore.EObject;
 
