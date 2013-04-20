@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmi:id="_2hrf8KlIEeKVzuUhz6AaIQ" type="EcoreTools" name="glucose.ecorediag" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_2mV9gKlIEeKVzuUhz6AaIQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_2m8acKlIEeKVzuUhz6AaIQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_2m-2sKlIEeKVzuUhz6AaIQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_2nAE0KlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//Person/lastName"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nAE0alIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nAr4KlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//Person/firstName"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nAr4alIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nAr4qlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//Person/personID"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nAr46lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nAr5KlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//Person/status"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nAr5alIEeKVzuUhz6AaIQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2m-2salIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2m-2sqlIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2m-2s6lIEeKVzuUhz6AaIQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2m_dwKlIEeKVzuUhz6AaIQ" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_2nBS8KlIEeKVzuUhz6AaIQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="glucose.ecore#//Person/getName"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nBS8alIEeKVzuUhz6AaIQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2m_dwalIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2m_dwqlIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2m_dw6lIEeKVzuUhz6AaIQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_2mV9galIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="glucose.ecore#//Person"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2mV9gqlIEeKVzuUhz6AaIQ" x="459" y="-63"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_2nB6AKlIEeKVzuUhz6AaIQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_2nB6A6lIEeKVzuUhz6AaIQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_2nB6BKlIEeKVzuUhz6AaIQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_2nU08KlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//Patient/weight"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nU08alIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nU08qlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//Patient/medRecNum"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nU086lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nVcAKlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//Patient/studyID"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nVcAalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nVcAqlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//Patient/birthdate"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nVcA6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nWDEKlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//Patient/height"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nWDEalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2nB6BalIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2nB6BqlIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2nB6B6lIEeKVzuUhz6AaIQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2nB6CKlIEeKVzuUhz6AaIQ" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_2nWDEqlIEeKVzuUhz6AaIQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="glucose.ecore#//Patient/getBirthdateString"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nWDE6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nWqIKlIEeKVzuUhz6AaIQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="glucose.ecore#//Patient/getTodayAgeYears"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nWqIalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nWqIqlIEeKVzuUhz6AaIQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="glucose.ecore#//Patient/getTodayAgeDays"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nWqI6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nWqJKlIEeKVzuUhz6AaIQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="glucose.ecore#//Patient/getDeltaAgeYears"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nWqJalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nXRMKlIEeKVzuUhz6AaIQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="glucose.ecore#//Patient/getDeltaAgeDays"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nXRMalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2nB6CalIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2nChEKlIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2nChEalIEeKVzuUhz6AaIQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_2nB6AalIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="glucose.ecore#//Patient"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2nB6AqlIEeKVzuUhz6AaIQ" x="252" y="90"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_2nXRMqlIEeKVzuUhz6AaIQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_2nX4QKlIEeKVzuUhz6AaIQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_2nX4QalIEeKVzuUhz6AaIQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_2nX4SalIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//User/accountRights"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nX4SqlIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nYfUKlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//User/accountName"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nYfUalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nYfUqlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//User/passwordDigest"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nYfU6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2nX4QqlIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2nX4Q6lIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2nX4RKlIEeKVzuUhz6AaIQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2nX4RalIEeKVzuUhz6AaIQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2nX4RqlIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2nX4R6lIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2nX4SKlIEeKVzuUhz6AaIQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_2nXRM6lIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="glucose.ecore#//User"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2nXRNKlIEeKVzuUhz6AaIQ" x="513" y="90"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_2nZtcKlIEeKVzuUhz6AaIQ" type="1005">
+    <children xmi:type="notation:Node" xmi:id="_2nZtc6lIEeKVzuUhz6AaIQ" type="4010"/>
+    <children xmi:type="notation:Node" xmi:id="_2naUgKlIEeKVzuUhz6AaIQ" type="5008">
+      <children xmi:type="notation:Node" xmi:id="_2na7kKlIEeKVzuUhz6AaIQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="glucose.ecore#//AccessType/Normal"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2na7kalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2na7kqlIEeKVzuUhz6AaIQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="glucose.ecore#//AccessType/Administrative"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2na7k6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2naUgalIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2naUgqlIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2naUg6lIEeKVzuUhz6AaIQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_2nZtcalIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EEnum" href="glucose.ecore#//AccessType"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2nZtcqlIEeKVzuUhz6AaIQ" x="63" y="198"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_2nbioKlIEeKVzuUhz6AaIQ" type="1005">
+    <children xmi:type="notation:Node" xmi:id="_2nbio6lIEeKVzuUhz6AaIQ" type="4010"/>
+    <children xmi:type="notation:Node" xmi:id="_2nbipKlIEeKVzuUhz6AaIQ" type="5008">
+      <children xmi:type="notation:Node" xmi:id="_2ncJsKlIEeKVzuUhz6AaIQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="glucose.ecore#//StatusType/Current"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2ncJsalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2ncJsqlIEeKVzuUhz6AaIQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="glucose.ecore#//StatusType/Archived"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2ncJs6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2ncwwKlIEeKVzuUhz6AaIQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="glucose.ecore#//StatusType/Invalid"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2ncwwalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2ncwwqlIEeKVzuUhz6AaIQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="glucose.ecore#//StatusType/Sample"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2ncww6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2nbipalIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2nbipqlIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2nbip6lIEeKVzuUhz6AaIQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_2nbioalIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EEnum" href="glucose.ecore#//StatusType"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2nbioqlIEeKVzuUhz6AaIQ" x="63" y="81"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_2ndX0KlIEeKVzuUhz6AaIQ" type="1004">
+    <children xmi:type="notation:Node" xmi:id="_2nd-4KlIEeKVzuUhz6AaIQ" type="4008"/>
+    <children xmi:type="notation:Node" xmi:id="_2nd-4alIEeKVzuUhz6AaIQ" type="4009"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_2ndX0alIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EDataType" href="glucose.ecore#//calendar"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2ndX0qlIEeKVzuUhz6AaIQ" x="27" y="-45"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_2nel8KlIEeKVzuUhz6AaIQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_2nel86lIEeKVzuUhz6AaIQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_2nel9KlIEeKVzuUhz6AaIQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_2nfNBKlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//ClinicalDecision/decisionTimeStamp"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nfNBalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nfNBqlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//ClinicalDecision/observationDate"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nfNB6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nf0EKlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//ClinicalDecision/patientWeight"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nf0EalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nf0EqlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//ClinicalDecision/patientHeight"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nf0E6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2ngbIKlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//ClinicalDecision/patientAgeDays"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2ngbIalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2ngbIqlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//ClinicalDecision/adviceText"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2ngbI6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2ngbJKlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//ClinicalDecision/rulesFiredText"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2ngbJalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nhCMKlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//ClinicalDecision/rationaleText"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nhCMalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nhCMqlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//ClinicalDecision/declineComment"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nhCM6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nhCNKlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//ClinicalDecision/acceptComment"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nhCNalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nhpQKlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//ClinicalDecision/otherComment"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nhpQalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nhpQqlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//ClinicalDecision/userAction"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nhpQ6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nhpRKlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//ClinicalDecision/minutesToNextEvaluation"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nhpRalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2niQUKlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//ClinicalDecision/decisionID"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2niQUalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2niQUqlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//ClinicalDecision/status"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2niQU6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2nel9alIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2nel9qlIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2nel96lIEeKVzuUhz6AaIQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2nfNAKlIEeKVzuUhz6AaIQ" type="5002">
+      <children xmi:type="notation:Node" xmi:id="_2ni3YKlIEeKVzuUhz6AaIQ" type="2002">
+        <element xmi:type="ecore:EOperation" href="glucose.ecore#//ClinicalDecision/advise"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2ni3YalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2nfNAalIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2nfNAqlIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2nfNA6lIEeKVzuUhz6AaIQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_2nel8alIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="glucose.ecore#//ClinicalDecision"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2nel8qlIEeKVzuUhz6AaIQ" x="468" y="234"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_2ni3YqlIEeKVzuUhz6AaIQ" type="1005">
+    <children xmi:type="notation:Node" xmi:id="_2ni3ZalIEeKVzuUhz6AaIQ" type="4010"/>
+    <children xmi:type="notation:Node" xmi:id="_2njecKlIEeKVzuUhz6AaIQ" type="5008">
+      <children xmi:type="notation:Node" xmi:id="_2njedKlIEeKVzuUhz6AaIQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="glucose.ecore#//UserActionType/Accept"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2njedalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2njedqlIEeKVzuUhz6AaIQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="glucose.ecore#//UserActionType/Decline"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2njed6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nkFgKlIEeKVzuUhz6AaIQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="glucose.ecore#//UserActionType/Backchart"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nkFgalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nkFgqlIEeKVzuUhz6AaIQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="glucose.ecore#//UserActionType/Passive"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nkFg6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2njecalIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2njecqlIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2njec6lIEeKVzuUhz6AaIQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_2ni3Y6lIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EEnum" href="glucose.ecore#//UserActionType"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2ni3ZKlIEeKVzuUhz6AaIQ" x="54" y="369"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_2nkFhKlIEeKVzuUhz6AaIQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_2nkskKlIEeKVzuUhz6AaIQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_2nkskalIEeKVzuUhz6AaIQ" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_2nlToKlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//GlucoseDecision/previousGlucoseConcentration"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nlToalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nlToqlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//GlucoseDecision/previousObservationTime"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nlTo6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nlTpKlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//GlucoseDecision/serumGlucoseConcentration"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nlTpalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nl6sKlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//GlucoseDecision/currentInsulinDripRate"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nl6salIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nl6sqlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//GlucoseDecision/carbohydrateStatus"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nl6s6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nmhwKlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//GlucoseDecision/recommendedInsulinDripRate"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nmhwalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nmhwqlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//GlucoseDecision/recommendedInsulinBolus"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nmhw6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nmhxKlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//GlucoseDecision/recommendedGlucoseBolus"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nmhxalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2nnI0KlIEeKVzuUhz6AaIQ" type="2001">
+        <element xmi:type="ecore:EAttribute" href="glucose.ecore#//GlucoseDecision/insulinMode"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nnI0alIEeKVzuUhz6AaIQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2nkskqlIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2nksk6lIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2nkslKlIEeKVzuUhz6AaIQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2nkslalIEeKVzuUhz6AaIQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2nkslqlIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2nksl6lIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2nksmKlIEeKVzuUhz6AaIQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_2nkFhalIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="glucose.ecore#//GlucoseDecision"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2nkFhqlIEeKVzuUhz6AaIQ" x="342" y="567"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_2nnI0qlIEeKVzuUhz6AaIQ" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_2nnv4KlIEeKVzuUhz6AaIQ" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_2nnv4alIEeKVzuUhz6AaIQ" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2nnv4qlIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2nnv46lIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2nnv5KlIEeKVzuUhz6AaIQ"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2nnv5alIEeKVzuUhz6AaIQ" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2nnv5qlIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2nnv56lIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2nnv6KlIEeKVzuUhz6AaIQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_2nnI06lIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="glucose.ecore#//IntensiveCareUnit"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2nnI1KlIEeKVzuUhz6AaIQ" x="459" y="-117"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_2nnv6alIEeKVzuUhz6AaIQ" type="1005">
+    <children xmi:type="notation:Node" xmi:id="_2noW8KlIEeKVzuUhz6AaIQ" type="4010"/>
+    <children xmi:type="notation:Node" xmi:id="_2noW8alIEeKVzuUhz6AaIQ" type="5008">
+      <children xmi:type="notation:Node" xmi:id="_2noW9alIEeKVzuUhz6AaIQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="glucose.ecore#//CarbohydrateStatusType/unchanged"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2noW9qlIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2no-AKlIEeKVzuUhz6AaIQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="glucose.ecore#//CarbohydrateStatusType/decreased"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2no-AalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_2no-AqlIEeKVzuUhz6AaIQ" type="2006">
+        <element xmi:type="ecore:EEnumLiteral" href="glucose.ecore#//CarbohydrateStatusType/increased"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2no-A6lIEeKVzuUhz6AaIQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2noW8qlIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2noW86lIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2noW9KlIEeKVzuUhz6AaIQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_2nnv6qlIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EEnum" href="glucose.ecore#//CarbohydrateStatusType"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2nnv66lIEeKVzuUhz6AaIQ" x="45" y="279"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_2nplEKlIEeKVzuUhz6AaIQ" type="1003">
+    <children xmi:type="notation:Node" xmi:id="_2nqMIKlIEeKVzuUhz6AaIQ" type="4007"/>
+    <children xmi:type="notation:Node" xmi:id="_2nqzMKlIEeKVzuUhz6AaIQ" type="5007">
+      <children xmi:type="notation:Node" xmi:id="_2nraQKlIEeKVzuUhz6AaIQ" type="2007">
+        <element xmi:type="ecore:EStringToStringMapEntry" href="glucose.ecore#//%teneo.jpa%/@details.0"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_2nraQalIEeKVzuUhz6AaIQ"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_2nqzMalIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_2nqzMqlIEeKVzuUhz6AaIQ"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_2nqzM6lIEeKVzuUhz6AaIQ"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_2nplEalIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10" fillColor="14668776" lineColor="4210752"/>
+    <element xmi:type="ecore:EAnnotation" href="glucose.ecore#//%teneo.jpa%"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2nplEqlIEeKVzuUhz6AaIQ" x="54" y="9"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_MTcGoKlKEeKVzuUhz6AaIQ" type="Text" fontName="Lucida Grande">
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_MTei4KlKEeKVzuUhz6AaIQ" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_MTei4alKEeKVzuUhz6AaIQ" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MTctsKlKEeKVzuUhz6AaIQ" x="-27" y="-108" width="227" height="104"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_1mW1QKlKEeKVzuUhz6AaIQ" type="Text" fontName="Lucida Grande" fontHeight="24" description="Glucose Decision Support Model">
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_1mW1QqlKEeKVzuUhz6AaIQ" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:BasicDecorationNode" xmi:id="_1mW1Q6lKEeKVzuUhz6AaIQ" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1mW1QalKEeKVzuUhz6AaIQ" x="-18" y="486"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_2hrf8alIEeKVzuUhz6AaIQ"/>
+  <element xmi:type="ecore:EPackage" href="glucose.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_2nwSwKlIEeKVzuUhz6AaIQ" type="3002" source="_2nB6AKlIEeKVzuUhz6AaIQ" target="_2nkFhKlIEeKVzuUhz6AaIQ">
+    <children xmi:type="notation:Node" xmi:id="_2nw50KlIEeKVzuUhz6AaIQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2nw50alIEeKVzuUhz6AaIQ" x="15" y="-43"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2nyvAKlIEeKVzuUhz6AaIQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2nyvAalIEeKVzuUhz6AaIQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_2nwSwalIEeKVzuUhz6AaIQ" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_2nwSwqlIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="glucose.ecore#//Patient/decisions"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2nwSw6lIEeKVzuUhz6AaIQ" points="[47, 182, -137, -533]$[47, 540, -137, -175]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_85rHUKlJEeKVzuUhz6AaIQ" id="(0.40414507772020725,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_85rHUalJEeKVzuUhz6AaIQ" id="(0.6653846153846154,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_2nz9IKlIEeKVzuUhz6AaIQ" type="3002" source="_2nB6AKlIEeKVzuUhz6AaIQ" target="_2nXRMqlIEeKVzuUhz6AaIQ">
+    <children xmi:type="notation:Node" xmi:id="_2nz9JKlIEeKVzuUhz6AaIQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2nz9JalIEeKVzuUhz6AaIQ" x="-21" y="-12"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2nz9JqlIEeKVzuUhz6AaIQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2nz9J6lIEeKVzuUhz6AaIQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_2nz9IalIEeKVzuUhz6AaIQ" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_2nz9IqlIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="glucose.ecore#//Patient/createdBy"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2nz9I6lIEeKVzuUhz6AaIQ" points="[76, 45, -70, 33]$[146, 45, 0, 33]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_24jH0KlIEeKVzuUhz6AaIQ" id="(0.6062176165803109,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_24jH0alIEeKVzuUhz6AaIQ" id="(0.006024096385542169,0.16049382716049382)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_2n0kMKlIEeKVzuUhz6AaIQ" type="3003" source="_2nB6AKlIEeKVzuUhz6AaIQ" target="_2mV9gKlIEeKVzuUhz6AaIQ">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_2n0kMalIEeKVzuUhz6AaIQ" routing="Rectilinear" closestDistance="true" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_2n0kMqlIEeKVzuUhz6AaIQ" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2n0kM6lIEeKVzuUhz6AaIQ" points="[0, 0, -115, 51]$[0, -26, -115, 25]$[115, -26, 0, 25]$[115, -51, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_24h5sKlIEeKVzuUhz6AaIQ" id="(0.8031088082901554,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_24h5salIEeKVzuUhz6AaIQ" id="(0.496,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_2n0kNKlIEeKVzuUhz6AaIQ" type="3002" source="_2nXRMqlIEeKVzuUhz6AaIQ" target="_2nXRMqlIEeKVzuUhz6AaIQ">
+    <children xmi:type="notation:Node" xmi:id="_2n1LQ6lIEeKVzuUhz6AaIQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2n1LRKlIEeKVzuUhz6AaIQ" x="-36" y="26"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2n1LRalIEeKVzuUhz6AaIQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2n1LRqlIEeKVzuUhz6AaIQ" x="9" y="-15"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_2n1LQKlIEeKVzuUhz6AaIQ" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_2n1LQalIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="glucose.ecore#//User/createdBy"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2n1LQqlIEeKVzuUhz6AaIQ" points="[80, 40, 80, 40]$[80, 78, 80, 78]$[41, 78, 41, 78]$[41, 40, 41, 40]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_2n1LR6lIEeKVzuUhz6AaIQ" type="3003" source="_2nXRMqlIEeKVzuUhz6AaIQ" target="_2mV9gKlIEeKVzuUhz6AaIQ">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_2n1LSKlIEeKVzuUhz6AaIQ" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_2n1LSalIEeKVzuUhz6AaIQ" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2n1LSqlIEeKVzuUhz6AaIQ" points="[-46, 0, -7, 34]$[-46, -33, -7, 1]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_24doQKlIEeKVzuUhz6AaIQ" id="(0.5,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_24ePUKlIEeKVzuUhz6AaIQ" id="(0.792,0.9903846153846154)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_2n1yUKlIEeKVzuUhz6AaIQ" type="3002" source="_2nel8KlIEeKVzuUhz6AaIQ" target="_2nXRMqlIEeKVzuUhz6AaIQ">
+    <children xmi:type="notation:Node" xmi:id="_2n1yVKlIEeKVzuUhz6AaIQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2n1yValIEeKVzuUhz6AaIQ" x="-12" y="-31"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2n1yVqlIEeKVzuUhz6AaIQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2n1yV6lIEeKVzuUhz6AaIQ" x="-12" y="18"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_2n1yUalIEeKVzuUhz6AaIQ" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_2n1yUqlIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="glucose.ecore#//ClinicalDecision/createdBy"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2n1yU6lIEeKVzuUhz6AaIQ" points="[0, 0, 13, 92]$[0, -92, 13, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_24e2YKlIEeKVzuUhz6AaIQ" id="(0.4972677595628415,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_24e2YalIEeKVzuUhz6AaIQ" id="(0.14457831325301204,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_2n1yWKlIEeKVzuUhz6AaIQ" type="3002" source="_2nkFhKlIEeKVzuUhz6AaIQ" target="_2nB6AKlIEeKVzuUhz6AaIQ">
+    <children xmi:type="notation:Node" xmi:id="_2n2ZYqlIEeKVzuUhz6AaIQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2n2ZY6lIEeKVzuUhz6AaIQ" x="5" y="-35"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2n2ZZKlIEeKVzuUhz6AaIQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2n2ZZalIEeKVzuUhz6AaIQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_2n1yWalIEeKVzuUhz6AaIQ" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_2n2ZYKlIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="glucose.ecore#//GlucoseDecision/patient"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2n2ZYalIEeKVzuUhz6AaIQ" points="[-137, -175, 47, 540]$[-137, -533, 47, 182]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_24grkKlIEeKVzuUhz6AaIQ" id="(0.6653846153846154,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_24grkalIEeKVzuUhz6AaIQ" id="(0.40414507772020725,0.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_2n2ZZqlIEeKVzuUhz6AaIQ" type="3003" source="_2nkFhKlIEeKVzuUhz6AaIQ" target="_2nel8KlIEeKVzuUhz6AaIQ">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_2n2ZZ6lIEeKVzuUhz6AaIQ" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_2n2ZaKlIEeKVzuUhz6AaIQ" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2n2ZaalIEeKVzuUhz6AaIQ" points="[0, 0, 0, 60]$[0, -60, 0, 0]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_24gEgKlIEeKVzuUhz6AaIQ" id="(0.8884615384615384,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_24gEgalIEeKVzuUhz6AaIQ" id="(0.13114754098360656,0.9892857142857143)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_2n3AcKlIEeKVzuUhz6AaIQ" type="3002" source="_2nnI0qlIEeKVzuUhz6AaIQ" target="_2nB6AKlIEeKVzuUhz6AaIQ">
+    <children xmi:type="notation:Node" xmi:id="_2n3AdKlIEeKVzuUhz6AaIQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2n3AdalIEeKVzuUhz6AaIQ" x="8" y="-29"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2n3AdqlIEeKVzuUhz6AaIQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2n3Ad6lIEeKVzuUhz6AaIQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_2n3AcalIEeKVzuUhz6AaIQ" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_2n3AcqlIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="glucose.ecore#//IntensiveCareUnit/patients"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2n3Ac6lIEeKVzuUhz6AaIQ" points="[-25, 21, 112, -368]$[-151, 21, -14, -368]$[-151, 207, -14, -182]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_24fdcKlIEeKVzuUhz6AaIQ" id="(0.24299065420560748,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_24fdcalIEeKVzuUhz6AaIQ" id="(0.49740932642487046,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_2n3AeKlIEeKVzuUhz6AaIQ" type="3002" source="_2nnI0qlIEeKVzuUhz6AaIQ" target="_2nXRMqlIEeKVzuUhz6AaIQ">
+    <children xmi:type="notation:Node" xmi:id="_2n3ngKlIEeKVzuUhz6AaIQ" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2n3ngalIEeKVzuUhz6AaIQ" x="-7" y="25"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_2n3ngqlIEeKVzuUhz6AaIQ" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_2n3ng6lIEeKVzuUhz6AaIQ" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_2n3AealIEeKVzuUhz6AaIQ" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_2n3AeqlIEeKVzuUhz6AaIQ" fontColor="4210752" fontName="Lucida Grande" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="glucose.ecore#//IntensiveCareUnit/users"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2n3Ae6lIEeKVzuUhz6AaIQ" points="[54, 27, -198, -259]$[221, 27, -31, -259]$[221, 207, -31, -79]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_24igwKlIEeKVzuUhz6AaIQ" id="(0.48598130841121495,0.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_24igwalIEeKVzuUhz6AaIQ" id="(0.6445783132530121,1.0)"/>
+  </edges>
+</notation:Diagram>
