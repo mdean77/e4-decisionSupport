@@ -69,7 +69,7 @@ public class FakeDataHandler {
 		GregorianCalendar decisionDates3 = new GregorianCalendar(2010,5,26);
 		GregorianCalendar decisionDates4 = new GregorianCalendar(2010,5,27);
 		initializePatientValues(patient1,"Dean","Mike",birthdate1,125.,55.6,"CHOM0099","12-34-56");
-		initializePatientValues(patient2,"Zuspan","Sally",birthdate2,114.6,35.6,"CHLA9099","34-56-78");
+		initializePatientValues(patient2,"Secco","Diana",birthdate2,114.6,35.6,"CHLA9099","34-56-78");
 		initializePersonValues(user1,"Welkie", "Katy");
 		initializePersonValues(user2,"Maloney", "Chris");
 	}
