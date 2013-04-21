@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -297,7 +298,7 @@ public class PatientImpl extends PersonImpl implements Patient {
 	 */
 	public EList<GlucoseDecision> getDecisions() {
 		if (decisions == null) {
-			decisions = new EObjectContainmentEList<GlucoseDecision>(GlucoseDecision.class, this, GlucosePackage.PATIENT__DECISIONS);
+			decisions = new EObjectContainmentWithInverseEList<GlucoseDecision>(GlucoseDecision.class, this, GlucosePackage.PATIENT__DECISIONS, GlucosePackage.GLUCOSE_DECISION__PATIENT);
 		}
 		return decisions;
 	}
@@ -388,6 +389,21 @@ public class PatientImpl extends PersonImpl implements Patient {
 		long millisBetween = Math.abs(getBirthdate().getTimeInMillis()
 			- date.getTimeInMillis());
 		return (int) (millisBetween / (1000 * 60 * 60 * 24));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GlucosePackage.PATIENT__DECISIONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDecisions()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**

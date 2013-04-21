@@ -16,6 +16,8 @@ import org.eclipse.emf.common.util.Enumerator;
  * <!-- begin-model-doc -->
  * These are the four potential actions of a user of our CDS system when clinical data have been entered.
  * When these actions are selected, dirty flags should be turned off because data are saved.
+ * 
+ * In addition there is a pending status that is used when a new decision object is created.
  * <!-- end-model-doc -->
  * @see glucose.GlucosePackage#getUserActionType()
  * @model
@@ -60,7 +62,15 @@ public enum UserActionType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PASSIVE(3, "Passive", "Passive");
+	PASSIVE(3, "Passive", "Passive"), /**
+	 * The '<em><b>Pending</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #PENDING_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	PENDING(4, "Pending", "Pending");
 
 	/**
 	 * The '<em><b>Accept</b></em>' literal value.
@@ -112,13 +122,29 @@ public enum UserActionType implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Used to indicate that the inference engine was turned off, so there was no active decision support provided.
+	 * <!-- end-model-doc -->
 	 * @see #PASSIVE
 	 * @model name="Passive"
-	 *        annotation="http://www.eclipse.org/emf/2002/GenModel null='null'"
 	 * @generated
 	 * @ordered
 	 */
 	public static final int PASSIVE_VALUE = 3;
+
+	/**
+	 * The '<em><b>Pending</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Used when new decision object is created prior to any user action.
+	 * <!-- end-model-doc -->
+	 * @see #PENDING
+	 * @model name="Pending"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int PENDING_VALUE = 4;
 
 	/**
 	 * An array of all the '<em><b>User Action Type</b></em>' enumerators.
@@ -132,6 +158,7 @@ public enum UserActionType implements Enumerator {
 			DECLINE,
 			BACKCHART,
 			PASSIVE,
+			PENDING,
 		};
 
 	/**
@@ -186,6 +213,7 @@ public enum UserActionType implements Enumerator {
 			case DECLINE_VALUE: return DECLINE;
 			case BACKCHART_VALUE: return BACKCHART;
 			case PASSIVE_VALUE: return PASSIVE;
+			case PENDING_VALUE: return PENDING;
 		}
 		return null;
 	}

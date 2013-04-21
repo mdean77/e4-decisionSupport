@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.utah.cdmcc.e4.glucose.model/src" modelPluginID="edu.utah.cdmcc.e4.glucose.model"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright 2013.  All rights reserved.&#xA;University of Utah School of Medicine&#xA;Department of Pediatrics&#xA;"
+    modelDirectory="/edu.utah.cdmcc.e4.glucose.model/src" modelPluginID="edu.utah.cdmcc.e4.glucose.model"
     modelName="Glucose" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
     copyrightFields="false">
   <foreignModel>glucose.ecore</foreignModel>
@@ -20,6 +21,7 @@
       <genEnumLiterals ecoreEnumLiteral="glucose.ecore#//UserActionType/Decline"/>
       <genEnumLiterals ecoreEnumLiteral="glucose.ecore#//UserActionType/Backchart"/>
       <genEnumLiterals ecoreEnumLiteral="glucose.ecore#//UserActionType/Passive"/>
+      <genEnumLiterals ecoreEnumLiteral="glucose.ecore#//UserActionType/Pending"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="glucose.ecore#//CarbohydrateStatusType">
       <genEnumLiterals ecoreEnumLiteral="glucose.ecore#//CarbohydrateStatusType/unchanged"/>
@@ -27,11 +29,11 @@
       <genEnumLiterals ecoreEnumLiteral="glucose.ecore#//CarbohydrateStatusType/increased"/>
     </genEnums>
     <genDataTypes ecoreDataType="glucose.ecore#//calendar"/>
-    <genDataTypes ecoreDataType="glucose.ecore#//gregorian"/>
     <genClasses ecoreClass="glucose.ecore#//Person">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//Person/lastName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//Person/firstName"/>
       <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//Person/personID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//Person/status"/>
       <genOperations ecoreOperation="glucose.ecore#//Person/getName"/>
     </genClasses>
     <genClasses ecoreClass="glucose.ecore#//Patient">
@@ -40,7 +42,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//Patient/studyID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//Patient/birthdate"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//Patient/height"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//Patient/status"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference glucose.ecore#//Patient/decisions"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference glucose.ecore#//Patient/createdBy"/>
       <genOperations ecoreOperation="glucose.ecore#//Patient/getBirthdateString"/>
@@ -75,6 +76,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//ClinicalDecision/minutesToNextEvaluation"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference glucose.ecore#//ClinicalDecision/createdBy"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//ClinicalDecision/decisionID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//ClinicalDecision/status"/>
+      <genOperations ecoreOperation="glucose.ecore#//ClinicalDecision/advise">
+        <genParameters ecoreParameter="glucose.ecore#//ClinicalDecision/advise/message"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="glucose.ecore#//GlucoseDecision">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//GlucoseDecision/previousGlucoseConcentration"/>
@@ -86,6 +91,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//GlucoseDecision/recommendedInsulinBolus"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//GlucoseDecision/recommendedGlucoseBolus"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute glucose.ecore#//GlucoseDecision/insulinMode"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference glucose.ecore#//GlucoseDecision/patient"/>
     </genClasses>
     <genClasses ecoreClass="glucose.ecore#//IntensiveCareUnit">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference glucose.ecore#//IntensiveCareUnit/patients"/>

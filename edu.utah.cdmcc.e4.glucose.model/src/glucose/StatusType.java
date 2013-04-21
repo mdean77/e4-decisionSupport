@@ -94,7 +94,9 @@ public enum StatusType implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * <!-- begin-model-doc -->
-	 * Patient is invalid or sample, and should not be archived to remote database.
+	 * Patient is invalid, and probably should not be archived to remote database.
+	 * We need to determine this with a Preference setting so that the administrative
+	 * user can choose whether to keep invalid patient records in the target.
 	 * <!-- end-model-doc -->
 	 * @see #INVALID
 	 * @model name="Invalid"
@@ -111,6 +113,9 @@ public enum StatusType implements Enumerator {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Patient is a sample patient and should NOT be archived to remote database.
+	 * <!-- end-model-doc -->
 	 * @see #SAMPLE
 	 * @model name="Sample"
 	 * @generated

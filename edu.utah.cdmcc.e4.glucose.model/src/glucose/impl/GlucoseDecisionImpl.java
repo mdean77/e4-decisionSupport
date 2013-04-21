@@ -6,13 +6,17 @@ import glucose.CarbohydrateStatusType;
 import glucose.GlucoseDecision;
 import glucose.GlucosePackage;
 
+import glucose.Patient;
 import java.util.Calendar;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,6 +34,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link glucose.impl.GlucoseDecisionImpl#getRecommendedInsulinBolus <em>Recommended Insulin Bolus</em>}</li>
  *   <li>{@link glucose.impl.GlucoseDecisionImpl#getRecommendedGlucoseBolus <em>Recommended Glucose Bolus</em>}</li>
  *   <li>{@link glucose.impl.GlucoseDecisionImpl#getInsulinMode <em>Insulin Mode</em>}</li>
+ *   <li>{@link glucose.impl.GlucoseDecisionImpl#getPatient <em>Patient</em>}</li>
  * </ul>
  * </p>
  *
@@ -429,6 +434,91 @@ public class GlucoseDecisionImpl extends ClinicalDecisionImpl implements Glucose
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Patient getPatient() {
+		if (eContainerFeatureID() != GlucosePackage.GLUCOSE_DECISION__PATIENT) return null;
+		return (Patient)eContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPatient(Patient newPatient, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newPatient, GlucosePackage.GLUCOSE_DECISION__PATIENT, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPatient(Patient newPatient) {
+		if (newPatient != eInternalContainer() || (eContainerFeatureID() != GlucosePackage.GLUCOSE_DECISION__PATIENT && newPatient != null)) {
+			if (EcoreUtil.isAncestor(this, newPatient))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newPatient != null)
+				msgs = ((InternalEObject)newPatient).eInverseAdd(this, GlucosePackage.PATIENT__DECISIONS, Patient.class, msgs);
+			msgs = basicSetPatient(newPatient, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GlucosePackage.GLUCOSE_DECISION__PATIENT, newPatient, newPatient));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GlucosePackage.GLUCOSE_DECISION__PATIENT:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetPatient((Patient)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GlucosePackage.GLUCOSE_DECISION__PATIENT:
+				return basicSetPatient(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case GlucosePackage.GLUCOSE_DECISION__PATIENT:
+				return eInternalContainer().eInverseRemove(this, GlucosePackage.PATIENT__DECISIONS, Patient.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -450,6 +540,8 @@ public class GlucoseDecisionImpl extends ClinicalDecisionImpl implements Glucose
 				return getRecommendedGlucoseBolus();
 			case GlucosePackage.GLUCOSE_DECISION__INSULIN_MODE:
 				return getInsulinMode();
+			case GlucosePackage.GLUCOSE_DECISION__PATIENT:
+				return getPatient();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -488,6 +580,9 @@ public class GlucoseDecisionImpl extends ClinicalDecisionImpl implements Glucose
 				return;
 			case GlucosePackage.GLUCOSE_DECISION__INSULIN_MODE:
 				setInsulinMode((String)newValue);
+				return;
+			case GlucosePackage.GLUCOSE_DECISION__PATIENT:
+				setPatient((Patient)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -528,6 +623,9 @@ public class GlucoseDecisionImpl extends ClinicalDecisionImpl implements Glucose
 			case GlucosePackage.GLUCOSE_DECISION__INSULIN_MODE:
 				setInsulinMode(INSULIN_MODE_EDEFAULT);
 				return;
+			case GlucosePackage.GLUCOSE_DECISION__PATIENT:
+				setPatient((Patient)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -558,6 +656,8 @@ public class GlucoseDecisionImpl extends ClinicalDecisionImpl implements Glucose
 				return RECOMMENDED_GLUCOSE_BOLUS_EDEFAULT == null ? recommendedGlucoseBolus != null : !RECOMMENDED_GLUCOSE_BOLUS_EDEFAULT.equals(recommendedGlucoseBolus);
 			case GlucosePackage.GLUCOSE_DECISION__INSULIN_MODE:
 				return INSULIN_MODE_EDEFAULT == null ? insulinMode != null : !INSULIN_MODE_EDEFAULT.equals(insulinMode);
+			case GlucosePackage.GLUCOSE_DECISION__PATIENT:
+				return getPatient() != null;
 		}
 		return super.eIsSet(featureID);
 	}

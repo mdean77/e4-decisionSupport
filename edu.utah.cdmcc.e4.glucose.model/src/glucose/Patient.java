@@ -161,6 +161,7 @@ public interface Patient extends Person {
 	/**
 	 * Returns the value of the '<em><b>Decisions</b></em>' containment reference list.
 	 * The list contents are of type {@link glucose.GlucoseDecision}.
+	 * It is bidirectional and its opposite is '{@link glucose.GlucoseDecision#getPatient <em>Patient</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decisions</em>' containment reference list isn't clear,
@@ -169,7 +170,8 @@ public interface Patient extends Person {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Decisions</em>' containment reference list.
 	 * @see glucose.GlucosePackage#getPatient_Decisions()
-	 * @model containment="true" keys="observationDate userAction"
+	 * @see glucose.GlucoseDecision#getPatient
+	 * @model opposite="patient" containment="true" keys="observationDate userAction"
 	 * @generated
 	 */
 	EList<GlucoseDecision> getDecisions();

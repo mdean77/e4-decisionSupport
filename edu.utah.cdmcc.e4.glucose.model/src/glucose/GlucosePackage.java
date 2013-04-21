@@ -721,13 +721,22 @@ public interface GlucosePackage extends EPackage {
 	int GLUCOSE_DECISION__INSULIN_MODE = CLINICAL_DECISION_FEATURE_COUNT + 8;
 
 	/**
+	 * The feature id for the '<em><b>Patient</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLUCOSE_DECISION__PATIENT = CLINICAL_DECISION_FEATURE_COUNT + 9;
+
+	/**
 	 * The number of structural features of the '<em>Decision</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GLUCOSE_DECISION_FEATURE_COUNT = CLINICAL_DECISION_FEATURE_COUNT + 9;
+	int GLUCOSE_DECISION_FEATURE_COUNT = CLINICAL_DECISION_FEATURE_COUNT + 10;
 
 	/**
 	 * The meta object id for the '{@link glucose.impl.IntensiveCareUnitImpl <em>Intensive Care Unit</em>}' class.
@@ -1308,6 +1317,17 @@ public interface GlucosePackage extends EPackage {
 	EAttribute getGlucoseDecision_InsulinMode();
 
 	/**
+	 * Returns the meta object for the container reference '{@link glucose.GlucoseDecision#getPatient <em>Patient</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Patient</em>'.
+	 * @see glucose.GlucoseDecision#getPatient()
+	 * @see #getGlucoseDecision()
+	 * @generated
+	 */
+	EReference getGlucoseDecision_Patient();
+
+	/**
 	 * Returns the meta object for class '{@link glucose.IntensiveCareUnit <em>Intensive Care Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1781,6 +1801,14 @@ public interface GlucosePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GLUCOSE_DECISION__INSULIN_MODE = eINSTANCE.getGlucoseDecision_InsulinMode();
+
+		/**
+		 * The meta object literal for the '<em><b>Patient</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GLUCOSE_DECISION__PATIENT = eINSTANCE.getGlucoseDecision_Patient();
 
 		/**
 		 * The meta object literal for the '{@link glucose.impl.IntensiveCareUnitImpl <em>Intensive Care Unit</em>}' class.

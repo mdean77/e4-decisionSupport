@@ -155,7 +155,7 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ADVICE_TEXT_EDEFAULT = null;
+	protected static final String ADVICE_TEXT_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getAdviceText() <em>Advice Text</em>}' attribute.
@@ -175,7 +175,7 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String RULES_FIRED_TEXT_EDEFAULT = null;
+	protected static final String RULES_FIRED_TEXT_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getRulesFiredText() <em>Rules Fired Text</em>}' attribute.
@@ -195,7 +195,7 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String RATIONALE_TEXT_EDEFAULT = null;
+	protected static final String RATIONALE_TEXT_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getRationaleText() <em>Rationale Text</em>}' attribute.
@@ -215,7 +215,7 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DECLINE_COMMENT_EDEFAULT = null;
+	protected static final String DECLINE_COMMENT_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getDeclineComment() <em>Decline Comment</em>}' attribute.
@@ -235,7 +235,7 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ACCEPT_COMMENT_EDEFAULT = null;
+	protected static final String ACCEPT_COMMENT_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getAcceptComment() <em>Accept Comment</em>}' attribute.
@@ -255,7 +255,7 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String OTHER_COMMENT_EDEFAULT = null;
+	protected static final String OTHER_COMMENT_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getOtherComment() <em>Other Comment</em>}' attribute.
@@ -295,7 +295,7 @@ public class ClinicalDecisionImpl extends EObjectImpl implements ClinicalDecisio
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int MINUTES_TO_NEXT_EVALUATION_EDEFAULT = 0;
+	protected static final int MINUTES_TO_NEXT_EVALUATION_EDEFAULT = 999999;
 
 	/**
 	 * The cached value of the '{@link #getMinutesToNextEvaluation() <em>Minutes To Next Evaluation</em>}' attribute.

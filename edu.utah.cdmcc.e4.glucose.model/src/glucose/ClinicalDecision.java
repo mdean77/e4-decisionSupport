@@ -170,6 +170,7 @@ public interface ClinicalDecision extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Advice Text</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Advice Text</em>' attribute isn't clear,
@@ -179,7 +180,7 @@ public interface ClinicalDecision extends EObject {
 	 * @return the value of the '<em>Advice Text</em>' attribute.
 	 * @see #setAdviceText(String)
 	 * @see glucose.GlucosePackage#getClinicalDecision_AdviceText()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getAdviceText();
@@ -196,6 +197,7 @@ public interface ClinicalDecision extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Rules Fired Text</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Rules Fired Text</em>' attribute isn't clear,
@@ -205,7 +207,7 @@ public interface ClinicalDecision extends EObject {
 	 * @return the value of the '<em>Rules Fired Text</em>' attribute.
 	 * @see #setRulesFiredText(String)
 	 * @see glucose.GlucosePackage#getClinicalDecision_RulesFiredText()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getRulesFiredText();
@@ -222,6 +224,7 @@ public interface ClinicalDecision extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Rationale Text</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Rationale Text</em>' attribute isn't clear,
@@ -231,7 +234,7 @@ public interface ClinicalDecision extends EObject {
 	 * @return the value of the '<em>Rationale Text</em>' attribute.
 	 * @see #setRationaleText(String)
 	 * @see glucose.GlucosePackage#getClinicalDecision_RationaleText()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getRationaleText();
@@ -248,6 +251,7 @@ public interface ClinicalDecision extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Decline Comment</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Decline Comment</em>' attribute isn't clear,
@@ -257,7 +261,7 @@ public interface ClinicalDecision extends EObject {
 	 * @return the value of the '<em>Decline Comment</em>' attribute.
 	 * @see #setDeclineComment(String)
 	 * @see glucose.GlucosePackage#getClinicalDecision_DeclineComment()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getDeclineComment();
@@ -274,6 +278,7 @@ public interface ClinicalDecision extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Accept Comment</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Accept Comment</em>' attribute isn't clear,
@@ -283,7 +288,7 @@ public interface ClinicalDecision extends EObject {
 	 * @return the value of the '<em>Accept Comment</em>' attribute.
 	 * @see #setAcceptComment(String)
 	 * @see glucose.GlucosePackage#getClinicalDecision_AcceptComment()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getAcceptComment();
@@ -300,6 +305,7 @@ public interface ClinicalDecision extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Other Comment</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Other Comment</em>' attribute isn't clear,
@@ -309,7 +315,7 @@ public interface ClinicalDecision extends EObject {
 	 * @return the value of the '<em>Other Comment</em>' attribute.
 	 * @see #setOtherComment(String)
 	 * @see glucose.GlucosePackage#getClinicalDecision_OtherComment()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getOtherComment();
@@ -326,6 +332,7 @@ public interface ClinicalDecision extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>User Action</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * The literals are from the enumeration {@link glucose.UserActionType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -337,7 +344,7 @@ public interface ClinicalDecision extends EObject {
 	 * @see glucose.UserActionType
 	 * @see #setUserAction(UserActionType)
 	 * @see glucose.GlucosePackage#getClinicalDecision_UserAction()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	UserActionType getUserAction();
@@ -355,6 +362,7 @@ public interface ClinicalDecision extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Minutes To Next Evaluation</b></em>' attribute.
+	 * The default value is <code>"999999"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Minutes To Next Evaluation</em>' attribute isn't clear,
@@ -364,7 +372,7 @@ public interface ClinicalDecision extends EObject {
 	 * @return the value of the '<em>Minutes To Next Evaluation</em>' attribute.
 	 * @see #setMinutesToNextEvaluation(int)
 	 * @see glucose.GlucosePackage#getClinicalDecision_MinutesToNextEvaluation()
-	 * @model
+	 * @model default="999999"
 	 * @generated
 	 */
 	int getMinutesToNextEvaluation();

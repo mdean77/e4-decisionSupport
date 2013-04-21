@@ -25,6 +25,7 @@ import java.util.Calendar;
  *   <li>{@link glucose.GlucoseDecision#getRecommendedInsulinBolus <em>Recommended Insulin Bolus</em>}</li>
  *   <li>{@link glucose.GlucoseDecision#getRecommendedGlucoseBolus <em>Recommended Glucose Bolus</em>}</li>
  *   <li>{@link glucose.GlucoseDecision#getInsulinMode <em>Insulin Mode</em>}</li>
+ *   <li>{@link glucose.GlucoseDecision#getPatient <em>Patient</em>}</li>
  * </ul>
  * </p>
  *
@@ -269,5 +270,33 @@ public interface GlucoseDecision extends ClinicalDecision {
 	 * @generated
 	 */
 	void setInsulinMode(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Patient</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link glucose.Patient#getDecisions <em>Decisions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Patient</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Patient</em>' container reference.
+	 * @see #setPatient(Patient)
+	 * @see glucose.GlucosePackage#getGlucoseDecision_Patient()
+	 * @see glucose.Patient#getDecisions
+	 * @model opposite="decisions" required="true" transient="false"
+	 * @generated
+	 */
+	Patient getPatient();
+
+	/**
+	 * Sets the value of the '{@link glucose.GlucoseDecision#getPatient <em>Patient</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Patient</em>' container reference.
+	 * @see #getPatient()
+	 * @generated
+	 */
+	void setPatient(Patient value);
 
 } // GlucoseDecision

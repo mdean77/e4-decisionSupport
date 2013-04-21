@@ -58,7 +58,7 @@ public class PersonImpl extends EObjectImpl implements Person {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String FIRST_NAME_EDEFAULT = null;
+	protected static final String FIRST_NAME_EDEFAULT = "";
 
 	/**
 	 * The cached value of the '{@link #getFirstName() <em>First Name</em>}' attribute.

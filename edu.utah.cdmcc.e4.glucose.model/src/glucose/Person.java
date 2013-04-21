@@ -58,6 +58,7 @@ public interface Person extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>First Name</b></em>' attribute.
+	 * The default value is <code>""</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>First Name</em>' attribute isn't clear,
@@ -67,7 +68,7 @@ public interface Person extends EObject {
 	 * @return the value of the '<em>First Name</em>' attribute.
 	 * @see #setFirstName(String)
 	 * @see glucose.GlucosePackage#getPerson_FirstName()
-	 * @model
+	 * @model default=""
 	 * @generated
 	 */
 	String getFirstName();

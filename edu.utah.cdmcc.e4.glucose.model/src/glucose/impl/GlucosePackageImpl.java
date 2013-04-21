@@ -582,6 +582,15 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getGlucoseDecision_Patient() {
+		return (EReference)glucoseDecisionEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIntensiveCareUnit() {
 		return intensiveCareUnitEClass;
 	}
@@ -726,6 +735,7 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 		createEAttribute(glucoseDecisionEClass, GLUCOSE_DECISION__RECOMMENDED_INSULIN_BOLUS);
 		createEAttribute(glucoseDecisionEClass, GLUCOSE_DECISION__RECOMMENDED_GLUCOSE_BOLUS);
 		createEAttribute(glucoseDecisionEClass, GLUCOSE_DECISION__INSULIN_MODE);
+		createEReference(glucoseDecisionEClass, GLUCOSE_DECISION__PATIENT);
 
 		intensiveCareUnitEClass = createEClass(INTENSIVE_CARE_UNIT);
 		createEReference(intensiveCareUnitEClass, INTENSIVE_CARE_UNIT__PATIENTS);
@@ -776,7 +786,7 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 		// Initialize classes and features; add operations and parameters
 		initEClass(personEClass, Person.class, "Person", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPerson_LastName(), ecorePackage.getEString(), "lastName", "", 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPerson_FirstName(), ecorePackage.getEString(), "firstName", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPerson_FirstName(), ecorePackage.getEString(), "firstName", "", 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPerson_PersonID(), ecorePackage.getEString(), "personID", null, 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPerson_Status(), this.getStatusType(), "status", "0", 0, 1, Person.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -788,7 +798,7 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 		initEAttribute(getPatient_StudyID(), ecorePackage.getEString(), "studyID", null, 0, 1, Patient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPatient_Birthdate(), this.getcalendar(), "birthdate", null, 0, 1, Patient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPatient_Height(), ecorePackage.getEDoubleObject(), "height", null, 0, 1, Patient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPatient_Decisions(), this.getGlucoseDecision(), null, "decisions", null, 0, -1, Patient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPatient_Decisions(), this.getGlucoseDecision(), this.getGlucoseDecision_Patient(), "decisions", null, 0, -1, Patient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		getPatient_Decisions().getEKeys().add(this.getClinicalDecision_ObservationDate());
 		getPatient_Decisions().getEKeys().add(this.getClinicalDecision_UserAction());
 		initEReference(getPatient_CreatedBy(), this.getUser(), null, "createdBy", null, 0, 1, Patient.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -817,14 +827,14 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 		initEAttribute(getClinicalDecision_PatientWeight(), ecorePackage.getEDouble(), "patientWeight", null, 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClinicalDecision_PatientHeight(), ecorePackage.getEDouble(), "patientHeight", null, 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClinicalDecision_PatientAgeDays(), ecorePackage.getEInt(), "patientAgeDays", null, 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClinicalDecision_AdviceText(), ecorePackage.getEString(), "adviceText", null, 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClinicalDecision_RulesFiredText(), ecorePackage.getEString(), "rulesFiredText", null, 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClinicalDecision_RationaleText(), ecorePackage.getEString(), "rationaleText", null, 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClinicalDecision_DeclineComment(), ecorePackage.getEString(), "declineComment", null, 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClinicalDecision_AcceptComment(), ecorePackage.getEString(), "acceptComment", null, 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClinicalDecision_OtherComment(), ecorePackage.getEString(), "otherComment", null, 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClinicalDecision_UserAction(), this.getUserActionType(), "userAction", null, 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getClinicalDecision_MinutesToNextEvaluation(), ecorePackage.getEInt(), "minutesToNextEvaluation", null, 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClinicalDecision_AdviceText(), ecorePackage.getEString(), "adviceText", "", 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClinicalDecision_RulesFiredText(), ecorePackage.getEString(), "rulesFiredText", "", 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClinicalDecision_RationaleText(), ecorePackage.getEString(), "rationaleText", "", 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClinicalDecision_DeclineComment(), ecorePackage.getEString(), "declineComment", "", 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClinicalDecision_AcceptComment(), ecorePackage.getEString(), "acceptComment", "", 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClinicalDecision_OtherComment(), ecorePackage.getEString(), "otherComment", "", 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClinicalDecision_UserAction(), this.getUserActionType(), "userAction", "", 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getClinicalDecision_MinutesToNextEvaluation(), ecorePackage.getEInt(), "minutesToNextEvaluation", "999999", 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getClinicalDecision_CreatedBy(), this.getUser(), null, "createdBy", null, 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClinicalDecision_DecisionID(), ecorePackage.getEString(), "decisionID", null, 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getClinicalDecision_Status(), this.getStatusType(), "status", "0", 0, 1, ClinicalDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -842,6 +852,7 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 		initEAttribute(getGlucoseDecision_RecommendedInsulinBolus(), ecorePackage.getEDoubleObject(), "recommendedInsulinBolus", null, 0, 1, GlucoseDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGlucoseDecision_RecommendedGlucoseBolus(), ecorePackage.getEDoubleObject(), "recommendedGlucoseBolus", null, 0, 1, GlucoseDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGlucoseDecision_InsulinMode(), ecorePackage.getEString(), "insulinMode", null, 0, 1, GlucoseDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGlucoseDecision_Patient(), this.getPatient(), this.getPatient_Decisions(), "patient", null, 1, 1, GlucoseDecision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(intensiveCareUnitEClass, IntensiveCareUnit.class, "IntensiveCareUnit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getIntensiveCareUnit_Patients(), this.getPatient(), null, "patients", null, 0, -1, IntensiveCareUnit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -869,6 +880,7 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 		addEEnumLiteral(userActionTypeEEnum, UserActionType.DECLINE);
 		addEEnumLiteral(userActionTypeEEnum, UserActionType.BACKCHART);
 		addEEnumLiteral(userActionTypeEEnum, UserActionType.PASSIVE);
+		addEEnumLiteral(userActionTypeEEnum, UserActionType.PENDING);
 
 		initEEnum(carbohydrateStatusTypeEEnum, CarbohydrateStatusType.class, "CarbohydrateStatusType");
 		addEEnumLiteral(carbohydrateStatusTypeEEnum, CarbohydrateStatusType.UNCHANGED);
@@ -911,13 +923,13 @@ public class GlucosePackageImpl extends EPackageImpl implements GlucosePackage {
 		   source, 
 		   new String[] {
 			 "appinfo", "@Id \n@GeneratedValue(generator=\"system-uuid\")\n"
-		   });																					
+		   });																						
 		addAnnotation
 		  (getClinicalDecision_DecisionID(), 
 		   source, 
 		   new String[] {
 			 "appinfo", "@Id \n@GeneratedValue(generator=\"system-uuid\")"
-		   });						
+		   });							
 	}
 
 } //GlucosePackageImpl
