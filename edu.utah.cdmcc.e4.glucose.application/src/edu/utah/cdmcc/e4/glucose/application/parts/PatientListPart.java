@@ -7,6 +7,7 @@ import glucose.provider.GlucoseItemProviderAdapterFactory;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
+import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
@@ -36,6 +37,12 @@ public class PatientListPart {
 	void init(){
 		tableViewer.setInput(service.getRootGroup());
 	}
+	
+	@Focus
+	public void setFocus() {
+		tableViewer.getTable().setFocus();
+	}
+	
 //	@PostConstruct
 //	public void createComposite(Composite parent, IntensiveCareUnit icu){
 //		Table table = new PatientTable(parent).getTable();
