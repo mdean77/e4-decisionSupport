@@ -51,7 +51,6 @@ public class IntensiveCareUnitListView {
 				ISelection selection = event.getSelection();
 				if (selection instanceof IStructuredSelection){
 					selectionService.setSelection(((IStructuredSelection) selection).getFirstElement());
-					System.out.println(((IStructuredSelection) selection).getFirstElement().toString());
 				}			
 			}
 		});

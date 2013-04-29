@@ -38,14 +38,13 @@ public class ActivePatientViewPart {
 	private CLabel patientNameText;
 	private int x = 10, y = 10, width = 120, height = 25;
 	private Button selectPatientButton;
-	private Patient patient;
 	
 	/**
 	 * Create contents of the view part.
 	 */
-	@PostConstruct
-	public void createControls(Composite parent,@Optional @Named(IServiceConstants.ACTIVE_SELECTION) Patient patient) {
-		this.patient = patient;
+	@PostConstruct 
+	public void createControls(Composite parent) {
+		System.out.println("Entered create controls post construction");
 		final Composite composite = new Composite(parent, SWT.NONE);
 		setupPatientName(composite);
 		setupMedicalRecNumber(composite);
@@ -70,6 +69,12 @@ public class ActivePatientViewPart {
 //				}
 //			}
 //		});
+	}
+	
+	@Inject
+	@Optional
+	public void setInput(@Named(IServiceConstants.ACTIVE_SELECTION) Patient patient){
+		System.out.println("Entered set input for active patient view");
 		selectPatientButton.setToolTipText("Select or change  active patient");
 		if (patient == null) {
 			selectPatientButton.setText("Select Active Patient");
@@ -77,13 +82,9 @@ public class ActivePatientViewPart {
 			selectPatientButton.setText("Change Active Patient");
 		}
 		selectPatientButton.setBounds(10, 164, 240, 28);
-	}
-
-	public void patientsChanged(Patient patient) {
-		if (patient == null && !patientNameText.getText().equals("Select a patient")){
-			// do nothing - leave old patient settings in place
-		} else if (patient == null)
-			initPatientFields();			
+		
+		if (patient == null)
+			initPatientFields();
 		else
 			refreshFields(patient);
 	}
@@ -94,9 +95,7 @@ public class ActivePatientViewPart {
 		medRecText.setText(patient.getMedRecNum());
 		birthdateText.setText(patient.getBirthdateString());
 		weightText.setText(formatter.format(patient.getWeight()));
-		//weightText.setText(patient.getWeight().toString());
 		heightText.setText(formatter.format(patient.getHeight()));
-		//heightText.setText(patient.getHeight().toString());
 		selectPatientButton.setText("Change Active Patient");
 	}
 
@@ -150,7 +149,7 @@ public class ActivePatientViewPart {
 		medRecLabel.setAlignment(SWT.RIGHT);
 		medRecLabel.setBounds(x, y + height, width, height);
 		medRecLabel.setText("Medical Record:");
-
+		
 		medRecText = new CLabel(composite, SWT.NONE);
 		medRecText.setAlignment(SWT.LEFT);
 		medRecText.setText("");
@@ -163,8 +162,8 @@ public class ActivePatientViewPart {
 
 		patientNameText = new CLabel(composite, SWT.NONE);
 		patientNameText.setAlignment(SWT.CENTER);
-		patientNameText.setText("Select a patient");
-		//patientNameText.setFont(SWTResourceManager.getFont("Lucida Grande", 18, SWT.BOLD));
+		patientNameText.setText("Select a patient");		
+		patientNameText.setFont(fontRegistry.get("patientname"));
 		patientNameText.setBounds(x, y, width * 2, height);
 	}
 	
@@ -174,7 +173,7 @@ public class ActivePatientViewPart {
 
 	@Focus
 	public void setFocus() {
-		// TODO	Set the focus to control
+		selectPatientButton.setFocus();
 	}
 
 }

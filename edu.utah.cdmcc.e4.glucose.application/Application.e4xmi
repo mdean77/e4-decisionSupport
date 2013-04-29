@@ -65,6 +65,7 @@
   <handlers xmi:id="_IjDC-5ibEeKOPO56Fzh8Mw" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.handlers.SaveHandler" command="_IjDC-pibEeKOPO56Fzh8Mw"/>
   <handlers xmi:id="_IjDC_pibEeKOPO56Fzh8Mw" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.handlers.AboutHandler" command="_IjDC_ZibEeKOPO56Fzh8Mw"/>
   <handlers xmi:id="_3AFgkKaSEeKHhdQnjVuIpg" elementId="" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.handlers.FakeDataHandler" command="_y170UKaSEeKHhdQnjVuIpg"/>
+  <handlers xmi:id="_o3CL8LA6EeK6NY4Sv780yg" elementId="" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.handlers.SelectPatientHandler" command="_UQCEEKgpEeK9o9csjlG7UQ"/>
   <bindingTables xmi:id="_IjDC9ZibEeKOPO56Fzh8Mw" bindingContext="_IjDC8JibEeKOPO56Fzh8Mw">
     <bindings xmi:id="_IjDC9pibEeKOPO56Fzh8Mw" keySequence="M1+Q" command="_IjDC85ibEeKOPO56Fzh8Mw"/>
     <bindings xmi:id="_IjDC-ZibEeKOPO56Fzh8Mw" keySequence="M1+O" command="_IjDC95ibEeKOPO56Fzh8Mw"/>

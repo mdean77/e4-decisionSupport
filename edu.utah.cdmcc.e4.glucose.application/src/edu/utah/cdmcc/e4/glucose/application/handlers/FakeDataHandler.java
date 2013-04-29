@@ -35,10 +35,7 @@ public class FakeDataHandler {
 
 	@CanExecute
 	public boolean canExecute() {
-		if (icu.getPatients().isEmpty() && icu.getUsers().isEmpty()) {
-			return true;
-		}
-		return false;
+		return (icu.getPatients().isEmpty() && icu.getUsers().isEmpty());	
 	}
 
 	private void addFakeData() {
