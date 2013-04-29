@@ -59,10 +59,16 @@ public class PatientListSelectionPart extends SelectionDialog {
 				okPressed();
 			}
 		});
+		
 		//getShell().setText("Select the Active Patient");
 		return parent;
 	}
 
+	@Inject
+	private void title(@Named(IServiceConstants.ACTIVE_SHELL) Shell shell){
+		shell.setText("Select the Active Patient");
+	}
+	
 	@Override
 	protected org.eclipse.swt.widgets.Label createMessageArea(Composite composite) {
 		return null;};	

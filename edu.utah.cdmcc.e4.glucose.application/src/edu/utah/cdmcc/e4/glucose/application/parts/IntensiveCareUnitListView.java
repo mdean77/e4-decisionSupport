@@ -1,10 +1,11 @@
 package edu.utah.cdmcc.e4.glucose.application.parts;
 
 import glucose.IntensiveCareUnitService;
+import glucose.Patient;
+import glucose.Person;
 import glucose.provider.GlucoseItemProviderAdapterFactory;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
-
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.workbench.modeling.ESelectionService;
 import org.eclipse.emf.common.notify.AdapterFactory;
@@ -50,7 +51,7 @@ public class IntensiveCareUnitListView {
 			public void selectionChanged(SelectionChangedEvent event) {
 				ISelection selection = event.getSelection();
 				if (selection instanceof IStructuredSelection){
-					selectionService.setSelection(((IStructuredSelection) selection).getFirstElement());
+						selectionService.setSelection(((IStructuredSelection) selection).getFirstElement());
 				}			
 			}
 		});
