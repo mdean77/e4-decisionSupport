@@ -1,8 +1,6 @@
 package edu.utah.cdmcc.e4.glucose.application.parts;
 
-import javax.annotation.PostConstruct;
 import javax.inject.Inject;
-
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
