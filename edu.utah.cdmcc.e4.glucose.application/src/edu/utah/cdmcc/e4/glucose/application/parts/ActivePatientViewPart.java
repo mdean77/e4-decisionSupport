@@ -6,12 +6,17 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.inject.Inject;
 import javax.inject.Named;
+import org.eclipse.core.commands.ParameterizedCommand;
+import org.eclipse.e4.core.commands.ECommandService;
+import org.eclipse.e4.core.commands.EHandlerService;
 import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.jface.resource.FontRegistry;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.CLabel;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
@@ -29,12 +34,14 @@ public class ActivePatientViewPart {
 	private int x = 10, y = 10, width = 120, height = 25;
 	private Button selectPatientButton;
 	
+	@Inject EHandlerService handlerService;
+	@Inject ECommandService commandService;
+	
 	/**
 	 * Create contents of the view part.
 	 */
 	@PostConstruct 
 	public void createControls(Composite parent) {
-		System.out.println("Entered create controls post construction");
 		final Composite composite = new Composite(parent, SWT.NONE);
 		setupPatientName(composite);
 		setupMedicalRecNumber(composite);
@@ -43,22 +50,12 @@ public class ActivePatientViewPart {
 		setupWeight(composite);
 
 		selectPatientButton = new Button(composite, SWT.NONE);
-//		selectPatientButton.addSelectionListener(new SelectionAdapter() {
-//			public void widgetSelected(final SelectionEvent e) {
-//				IHandlerService handlerService = (IHandlerService) getSite().getService(IHandlerService.class);
-//				try {
-//					handlerService.executeCommand("edu.utah.cdmcc.commands.SelectPatient", null);
-//				} catch (ExecutionException e1) {
-//					e1.printStackTrace();
-//				} catch (NotDefinedException e1) {
-//					e1.printStackTrace();
-//				} catch (NotEnabledException e1) {
-//					e1.printStackTrace();
-//				} catch (NotHandledException e1) {
-//					e1.printStackTrace();
-//				}
-//			}
-//		});
+		selectPatientButton.addSelectionListener(new SelectionAdapter(){
+			public void widgetSelected(final SelectionEvent e){
+				ParameterizedCommand myCommand = commandService.createCommand("edu.utah.cdmcc.e4.glucose.application.command.selectPatient", null);
+				handlerService.executeHandler(myCommand);
+			}
+		});
 	}
 	
 	@Inject
