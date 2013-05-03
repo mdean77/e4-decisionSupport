@@ -33,14 +33,14 @@ public class ActivePatientViewPart {
 	private CLabel patientNameText;
 	private int x = 10, y = 10, width = 120, height = 25;
 	private Button selectPatientButton;
-	
+
 	@Inject EHandlerService handlerService;
 	@Inject ECommandService commandService;
-	
+
 	/**
 	 * Create contents of the view part.
 	 */
-	@PostConstruct 
+	@PostConstruct
 	public void createControls(Composite parent) {
 		final Composite composite = new Composite(parent, SWT.NONE);
 		setupPatientName(composite);
@@ -50,17 +50,18 @@ public class ActivePatientViewPart {
 		setupWeight(composite);
 
 		selectPatientButton = new Button(composite, SWT.NONE);
-		selectPatientButton.addSelectionListener(new SelectionAdapter(){
-			public void widgetSelected(final SelectionEvent e){
-				ParameterizedCommand myCommand = commandService.createCommand("edu.utah.cdmcc.e4.glucose.application.command.selectPatient", null);
+		selectPatientButton.addSelectionListener(new SelectionAdapter() {
+			public void widgetSelected(final SelectionEvent e) {
+				ParameterizedCommand myCommand = commandService.createCommand(
+						"edu.utah.cdmcc.e4.glucose.application.command.selectPatient", null);
 				handlerService.executeHandler(myCommand);
 			}
 		});
 	}
-	
+
 	@Inject
 	@Optional
-	public void setInput(@Named(IServiceConstants.ACTIVE_SELECTION) Patient patient){
+	public void setInput(@Named(IServiceConstants.ACTIVE_SELECTION) Patient patient) {
 		System.out.println("Entered set input for active patient view");
 		selectPatientButton.setToolTipText("Select or change  active patient");
 		if (patient == null) {
@@ -69,7 +70,7 @@ public class ActivePatientViewPart {
 			selectPatientButton.setText("Change Active Patient");
 		}
 		selectPatientButton.setBounds(10, 164, 240, 28);
-		
+
 		if (patient == null)
 			initPatientFields();
 		else
@@ -94,7 +95,7 @@ public class ActivePatientViewPart {
 		heightText.setText("");
 		selectPatientButton.setText("Select Active Patient");
 	}
-	
+
 	private void setupWeight(final Composite composite) {
 		final CLabel weightLabel = new CLabel(composite, SWT.NONE);
 		weightLabel.setAlignment(SWT.RIGHT);
@@ -136,7 +137,7 @@ public class ActivePatientViewPart {
 		medRecLabel.setAlignment(SWT.RIGHT);
 		medRecLabel.setBounds(x, y + height, width, height);
 		medRecLabel.setText("Medical Record:");
-		
+
 		medRecText = new CLabel(composite, SWT.NONE);
 		medRecText.setAlignment(SWT.LEFT);
 		medRecText.setText("");
@@ -149,11 +150,11 @@ public class ActivePatientViewPart {
 
 		patientNameText = new CLabel(composite, SWT.NONE);
 		patientNameText.setAlignment(SWT.CENTER);
-		patientNameText.setText("Select a patient");		
+		patientNameText.setText("Select a patient");
 		patientNameText.setFont(fontRegistry.get("patientname"));
 		patientNameText.setBounds(x, y, width * 2, height);
 	}
-	
+
 	@PreDestroy
 	public void dispose() {
 	}

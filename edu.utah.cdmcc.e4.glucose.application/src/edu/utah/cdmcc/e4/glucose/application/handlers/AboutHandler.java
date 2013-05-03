@@ -11,7 +11,6 @@
 package edu.utah.cdmcc.e4.glucose.application.handlers;
 
 import javax.inject.Named;
-
 import org.eclipse.e4.core.di.annotations.Execute;
 import org.eclipse.e4.ui.services.IServiceConstants;
 import org.eclipse.jface.dialogs.MessageDialog;

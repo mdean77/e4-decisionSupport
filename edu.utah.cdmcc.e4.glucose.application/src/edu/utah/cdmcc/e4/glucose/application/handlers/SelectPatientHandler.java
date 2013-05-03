@@ -19,22 +19,9 @@ public class SelectPatientHandler {
 		PatientListSelectionPart dialog = ContextInjectionFactory.make(PatientListSelectionPart.class, context);
 		if(dialog.open() == SelectionDialog.OK){
 			Object selection[] = dialog.getResult();
-
-			if (selection.length > 0) {
+			if (selection != null && selection.length > 0) {
 				selectionService.setSelection((Patient) selection[0]);
 			}
 		}
 	}
-
 }
-
-//public class ExitHandlerWithCheck {
-//	@Execute
-//	public void execute(IEclipseContext context, IWorkbench workbench) {
-//		ExitDialog dialog = ContextInjectionFactory.make(ExitDialog.class, context);
-//		dialog.create();
-//		if (dialog.open() == Window.OK) {
-//			workbench.close();
-//		}
-//	}
-//}
