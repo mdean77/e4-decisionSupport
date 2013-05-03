@@ -38,15 +38,14 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Environment;
 
-
 /**
- * Quick Start Tutorial for the <a href="http://wiki.eclipse.org/Teneo">Teneo</a> project.
+ * Quick Start Tutorial for the <a
+ * href="http://wiki.eclipse.org/Teneo">Teneo</a> project.
  * 
  * @author <a href="mailto:mtaal@elver.org">Martin Taal</a>
  * @version $Revision: 1.7 $
  */
 public class QuickStart {
-
 
 	/** The main method */
 	public static void main(String[] args) {
@@ -57,8 +56,9 @@ public class QuickStart {
 	}
 
 	/**
-	 * The method performing the real action. This method is used by other tutorials therefore has it
-	 * been made public and expects the database name and returns an instance of the HbDataStore.
+	 * The method performing the real action. This method is used by other
+	 * tutorials therefore has it been made public and expects the database name
+	 * and returns an instance of the HbDataStore.
 	 */
 	public static HbDataStore doQuickStart(String dbName) {
 
@@ -68,26 +68,24 @@ public class QuickStart {
 		// Another approach is setting the properties in the HbDataStore.
 		// For more information see section 3.1 of the Hibernate manual
 		final Properties props = new Properties();
-		 props.setProperty(Environment.DRIVER, "com.mysql.jdbc.Driver");
-		 props.setProperty(Environment.USER, "root");
-		 props.setProperty(Environment.URL, "jdbc:mysql://127.0.0.1:3306/" +
-		 dbName);
-		 props.setProperty(Environment.PASS, "root");
-		 props.setProperty(Environment.DIALECT,
-		 org.hibernate.dialect.MySQL5InnoDBDialect.class.getName());
+		props.setProperty(Environment.DRIVER, "com.mysql.jdbc.Driver");
+		props.setProperty(Environment.USER, "root");
+		props.setProperty(Environment.URL, "jdbc:mysql://127.0.0.1:3306/" + dbName);
+		props.setProperty(Environment.PASS, "root");
+		props.setProperty(Environment.DIALECT, org.hibernate.dialect.MySQL5InnoDBDialect.class.getName());
 
-//		props.setProperty(Environment.DRIVER, "org.hsqldb.jdbcDriver");
-//		props.setProperty(Environment.USER, "sa");
-//		props.setProperty(Environment.URL, "jdbc:hsqldb:mem:library");
-//		props.setProperty(Environment.PASS, "");
-//		props.setProperty(Environment.DIALECT, org.hibernate.dialect.HSQLDialect.class.getName());
+		// props.setProperty(Environment.DRIVER, "org.hsqldb.jdbcDriver");
+		// props.setProperty(Environment.USER, "sa");
+		// props.setProperty(Environment.URL, "jdbc:hsqldb:mem:library");
+		// props.setProperty(Environment.PASS, "");
+		// props.setProperty(Environment.DIALECT,
+		// org.hibernate.dialect.HSQLDialect.class.getName());
 
 		// set a specific option
 		// see this page
 		// http://wiki.eclipse.org/Teneo/Hibernate/Configuration_Options
 		// for all the available options
-		props
-				.setProperty(PersistenceOptions.CASCADE_POLICY_ON_NON_CONTAINMENT, "REFRESH,PERSIST,MERGE");
+		props.setProperty(PersistenceOptions.CASCADE_POLICY_ON_NON_CONTAINMENT, "REFRESH,PERSIST,MERGE");
 
 		// the name of the session factory
 		String hbName = "Glucose";
@@ -125,13 +123,13 @@ public class QuickStart {
 		user.setAccountRights(AccessType.NORMAL);
 		user.setFirstName("Michael");
 		user.setLastName("Dean");
-		
-		//picu.getUsers().add(user);
-		//session.save(user);
-		
+
+		// picu.getUsers().add(user);
+		// session.save(user);
+
 		Patient patient = GlucoseFactory.eINSTANCE.createPatient();
-		//patient.setBirthdate(new GregorianCalendar());
-		patient.setBirthdate(Calendar.getInstance()); 
+		// patient.setBirthdate(new GregorianCalendar());
+		patient.setBirthdate(Calendar.getInstance());
 
 		patient.setCreatedBy(user);
 		patient.setFirstName("Sally Jo");
@@ -142,13 +140,12 @@ public class QuickStart {
 		patient.setStatus(StatusType.CURRENT);
 		patient.setStudyID("CHOM0003");
 
-		//session.save(patient);
-		
-		
+		// session.save(patient);
+
 		GlucoseDecision decision = GlucoseFactory.eINSTANCE.createGlucoseDecision();
 		decision.setCreatedBy(user);
 		decision.setCarbohydrateStatus(CarbohydrateStatusType.UNCHANGED);
-		
+
 		// add the user and patient to the intensive care unit
 		picu.getPatients().add(patient);
 		picu.getUsers().add(user);
