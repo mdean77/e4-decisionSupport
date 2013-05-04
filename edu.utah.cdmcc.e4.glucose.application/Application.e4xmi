@@ -5,25 +5,22 @@
       <children xsi:type="advanced:Perspective" xmi:id="_IjDqBZibEeKOPO56Fzh8Mw">
         <children xsi:type="basic:PartSashContainer" xmi:id="_IjDqBpibEeKOPO56Fzh8Mw" horizontal="true">
           <children xsi:type="basic:PartSashContainer" xmi:id="_0siWEJibEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.partsashcontainer.0" containerData="25">
-            <children xsi:type="basic:PartStack" xmi:id="_QNg3cJifEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.partstack.1" containerData="35">
-              <children xsi:type="basic:Part" xmi:id="_IjDqCJibEeKOPO56Fzh8Mw" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.parts.PatientListPart" label="ICU Listing (Patients and User)"/>
-            </children>
-            <children xsi:type="basic:PartStack" xmi:id="_Q05AgJifEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.partstack.2" containerData="35">
+            <children xsi:type="basic:PartStack" xmi:id="_Q05AgJifEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.partstack.2" containerData="35" selectedElement="_ov16kJibEeKOPO56Fzh8Mw">
               <children xsi:type="basic:Part" xmi:id="_ov16kJibEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.activePatientViewPart" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.parts.ActivePatientViewPart" label="Selected Patient"/>
             </children>
-            <children xsi:type="basic:PartStack" xmi:id="_RZRf8JifEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.partstack.3" containerData="30">
-              <children xsi:type="basic:Part" xmi:id="_pvB0wJidEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.part.2" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.parts.SamplePart" label="Time to Next Measurement"/>
+            <children xsi:type="basic:PartStack" xmi:id="_RZRf8JifEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.partstack.3" containerData="30" selectedElement="_pvB0wJidEeKOPO56Fzh8Mw">
+              <children xsi:type="basic:Part" xmi:id="_pvB0wJidEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.clockViewPart" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.parts.ClockPart" label="Time to Next Measurement"/>
             </children>
           </children>
           <children xsi:type="basic:PartSashContainer" xmi:id="_kmWOQJieEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.partsashcontainer.3" containerData="75">
             <children xsi:type="basic:PartSashContainer" xmi:id="_pU4Z8JieEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.partsashcontainer.1" containerData="70">
               <children xsi:type="basic:PartStack" xmi:id="_MGSt8JigEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.partstack.4">
-                <children xsi:type="basic:Part" xmi:id="_s4iG4JieEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.part.4" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.parts.SamplePart" label="Active Patient Name"/>
+                <children xsi:type="basic:Part" xmi:id="_s4iG4JieEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.decisionEditorPart" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.parts.SamplePart" label="Active Patient Name"/>
               </children>
             </children>
             <children xsi:type="basic:PartStack" xmi:id="_p5Q5YJieEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.partstack.0" containerData="30">
-              <children xsi:type="basic:Part" xmi:id="_qghGoJieEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.part.0" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.parts.SamplePart" label="Decision Table"/>
-              <children xsi:type="basic:Part" xmi:id="_rBd3kJieEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.part.3" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.parts.SamplePart" label="Rule Trace" closeable="true"/>
+              <children xsi:type="basic:Part" xmi:id="_qghGoJieEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.decisionViewPart" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.parts.GlucoseDecisionListPart" label="Decision Table"/>
+              <children xsi:type="basic:Part" xmi:id="_rBd3kJieEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.ruleTraceViewPart" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.parts.SamplePart" label="Rule Trace" closeable="true"/>
             </children>
           </children>
         </children>

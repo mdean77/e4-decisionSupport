@@ -42,6 +42,7 @@ public class PatientListSelectionPart extends SelectionDialog {
 	@Override
 	@Inject
 	protected Control createDialogArea(final Composite parent) {
+		System.out.println("Entered create Dialog Area of Selection Part");
 		Table table = new PatientTable(parent).getTable();
 		viewer = new TableViewer(table);
 		AdapterFactory adapterFactory = new GlucoseItemProviderAdapterFactory();
