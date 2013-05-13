@@ -21,6 +21,8 @@ import org.eclipse.ui.progress.UIJob;
  * 
  * @author J. Michael Dean, M.D., M.B.A. (University of Utah) Copyright 2005 -
  *         2008. All Rights Reserved.
+ *         
+ *         EXTENSIVE REVISION May 2013 to use e4 architecture.
  * 
  */
 public class ClockJob extends UIJob {
