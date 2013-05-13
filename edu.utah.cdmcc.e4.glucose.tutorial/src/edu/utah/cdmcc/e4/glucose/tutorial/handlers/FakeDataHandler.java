@@ -25,7 +25,7 @@ public class FakeDataHandler {
 
 	@PostConstruct
 	private void init() {
-		icu = service.getRootGroup();
+		icu = service.getIntensiveCareUnit();
 	}
 
 	@Execute

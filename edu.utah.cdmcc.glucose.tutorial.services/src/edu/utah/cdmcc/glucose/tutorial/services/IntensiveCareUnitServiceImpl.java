@@ -9,7 +9,7 @@ public class IntensiveCareUnitServiceImpl implements IntensiveCareUnitService {
 	IntensiveCareUnit icu = GlucoseFactory.eINSTANCE.createIntensiveCareUnit();
 	
 	@Override
-	public IntensiveCareUnit getRootGroup() {
+	public IntensiveCareUnit getIntensiveCareUnit() {
 		return icu;
 	}
 }
