@@ -14,6 +14,7 @@ Text {
 /* Identifies only those SWT Text elements 
    appearing within a Composite */
 
+
 Composite Text {
   background-color: white;  
   color: black;
@@ -37,9 +38,24 @@ SashForm {
 /*     background-color: #e3efff #c1d5ef 60%; */
 /* } */
 
+.selectPatientButton {
+	color:red;
+}
 
 CTabItem, ToolBar, Button, CBanner, CoolBar {
   font-size: 12;
   background-color: #e3efff;
 /* background-color: green; */
 }
+
+/**********  Decision Support Clock GUI ***********/
+.minutesLeftText {
+	background-color: rgb(45, 28, 255);
+	color: white;
+	font: Helvetica 35px;
+}
+
+.minutesLeftLabel {
+	font: Lucida Grande 20px;
+}
+/**************************************************/
