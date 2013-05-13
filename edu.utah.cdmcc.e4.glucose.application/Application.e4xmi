@@ -42,6 +42,7 @@
       <children xsi:type="menu:Menu" xmi:id="_7ud5AJihEeKOPO56Fzh8Mw" elementId="edu.utah.cdmcc.e4.glucose.application.menu.database" label="Database">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_yVR10KgoEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.0" label="Initialize Local Database (Destructive)" command="_loYP8KgpEeK9o9csjlG7UQ"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_XPMFUKaTEeKHhdQnjVuIpg" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.addFakePatients" label="Add Fake Data" command="_y170UKaSEeKHhdQnjVuIpg"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_jI9DsLcdEeKtcuRhGAVoDQ" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.1" label="Add Fake Decision" command="_YAYMwLcdEeKtcuRhGAVoDQ"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_84xpwKgoEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.addUser" label="Add User" command="_mST9wKgpEeK9o9csjlG7UQ"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_91JLYKgoEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.transferToTarget" label="Transfer Data to Target Database" command="_mwBNcKgpEeK9o9csjlG7UQ"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_Edy6YKgpEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.handledmenuitem.initializeTarget" label="Initialize Target Database (Destructive)" command="_nSqAcKgpEeK9o9csjlG7UQ"/>
@@ -63,6 +64,7 @@
   <handlers xmi:id="_IjDC_pibEeKOPO56Fzh8Mw" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.handlers.AboutHandler" command="_IjDC_ZibEeKOPO56Fzh8Mw"/>
   <handlers xmi:id="_3AFgkKaSEeKHhdQnjVuIpg" elementId="" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.handlers.FakeDataHandler" command="_y170UKaSEeKHhdQnjVuIpg"/>
   <handlers xmi:id="_o3CL8LA6EeK6NY4Sv780yg" elementId="" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.handlers.SelectPatientHandler" command="_UQCEEKgpEeK9o9csjlG7UQ"/>
+  <handlers xmi:id="_RdiK0LcdEeKtcuRhGAVoDQ" elementId="" contributionURI="bundleclass://edu.utah.cdmcc.e4.glucose.application/edu.utah.cdmcc.e4.glucose.application.handlers.AddFakeDecisionToPatient" command="_YAYMwLcdEeKtcuRhGAVoDQ"/>
   <bindingTables xmi:id="_IjDC9ZibEeKOPO56Fzh8Mw" bindingContext="_IjDC8JibEeKOPO56Fzh8Mw">
     <bindings xmi:id="_IjDC9pibEeKOPO56Fzh8Mw" keySequence="M1+Q" command="_IjDC85ibEeKOPO56Fzh8Mw"/>
     <bindings xmi:id="_IjDC-ZibEeKOPO56Fzh8Mw" keySequence="M1+O" command="_IjDC95ibEeKOPO56Fzh8Mw"/>
@@ -85,6 +87,7 @@
   <commands xmi:id="_mST9wKgpEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.command.addUser" commandName="addUserCommand" description="Add new user"/>
   <commands xmi:id="_mwBNcKgpEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.command.transferData" commandName="transferDataCommand" description="Transfer data from local database to the target"/>
   <commands xmi:id="_nSqAcKgpEeK9o9csjlG7UQ" elementId="edu.utah.cdmcc.e4.glucose.application.command.initializeTarget" commandName="initializeTargetCommand" description="Initialize the target database"/>
+  <commands xmi:id="_YAYMwLcdEeKtcuRhGAVoDQ" elementId="edu.utah.cdmcc.e4.glucose.application.command.addFakeDecision" commandName="addFakeDecision" description="Add fake decision to a sample patient"/>
   <addons xmi:id="_IjCb4pibEeKOPO56Fzh8Mw" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_IjCb45ibEeKOPO56Fzh8Mw" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_IjCb5JibEeKOPO56Fzh8Mw" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
