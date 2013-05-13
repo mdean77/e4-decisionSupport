@@ -12,6 +12,7 @@ import org.eclipse.e4.core.commands.EHandlerService;
 import org.eclipse.e4.core.di.annotations.Optional;
 import org.eclipse.e4.ui.di.Focus;
 import org.eclipse.e4.ui.services.IServiceConstants;
+import org.eclipse.e4.ui.services.IStylingEngine;
 import org.eclipse.jface.resource.FontRegistry;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.CLabel;
@@ -41,7 +42,7 @@ public class ActivePatientViewPart {
 	 * Create contents of the view part.
 	 */
 	@PostConstruct
-	public void createControls(Composite parent) {
+	public void createControls(Composite parent, @Optional IStylingEngine styleEngine) {
 		final Composite composite = new Composite(parent, SWT.NONE);
 		setupPatientName(composite);
 		setupMedicalRecNumber(composite);
@@ -57,6 +58,10 @@ public class ActivePatientViewPart {
 				handlerService.executeHandler(myCommand);
 			}
 		});
+		
+		if (styleEngine != null){
+			styleEngine.setClassname(selectPatientButton, "selectPatientButton");
+		}
 	}
 
 	@Inject

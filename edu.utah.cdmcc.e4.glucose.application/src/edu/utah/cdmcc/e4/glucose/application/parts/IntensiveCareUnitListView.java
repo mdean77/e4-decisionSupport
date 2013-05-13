@@ -41,7 +41,7 @@ public class IntensiveCareUnitListView {
 
 	@PostConstruct
 	void init() {
-		viewer.setInput(service.getRootGroup());
+		viewer.setInput(service.getIntensiveCareUnit());
 		viewer.addSelectionChangedListener(new ISelectionChangedListener() {
 			@Override
 			public void selectionChanged(SelectionChangedEvent event) {
