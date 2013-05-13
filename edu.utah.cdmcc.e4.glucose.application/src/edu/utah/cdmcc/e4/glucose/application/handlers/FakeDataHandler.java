@@ -17,13 +17,14 @@ import org.eclipse.e4.core.di.annotations.CanExecute;
 
 public class FakeDataHandler {
 
-	@Inject IntensiveCareUnitService service;
+	@Inject
+	IntensiveCareUnitService service;
 
 	private IntensiveCareUnit icu;
 
 	@PostConstruct
 	private void init() {
-		icu = service.getRootGroup();
+		icu = service.getIntensiveCareUnit();
 	}
 
 	@Execute
@@ -65,6 +66,7 @@ public class FakeDataHandler {
 		GregorianCalendar decisionDates4 = new GregorianCalendar(2010, 5, 27);
 		initializePatientValues(patient1, "Dean", "Mike", birthdate1, 125., 55.6, "CHOM0099", "12-34-56");
 		initializePatientValues(patient2, "Secco", "Diana", birthdate2, 114.6, 35.6, "CHLA9099", "34-56-78");
+		patient2.setStatus(StatusType.CURRENT);
 		initializePersonValues(user1, "Welkie", "Katy");
 		initializePersonValues(user2, "Maloney", "Chris");
 		initializeDecisionValues(decision1, "No advice", "Because I said so", 1.44, decisionDates1, 60);
