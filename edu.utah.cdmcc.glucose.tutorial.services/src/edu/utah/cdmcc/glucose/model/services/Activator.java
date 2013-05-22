@@ -1,4 +1,4 @@
-package edu.utah.cdmcc.glucose.tutorial.services;
+package edu.utah.cdmcc.glucose.model.services;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

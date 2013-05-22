@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="edu.utah.cdmcc.glucose.tutorial.services">  
-   <implementation class="edu.utah.cdmcc.glucose.tutorial.services.IntensiveCareUnitServiceImpl"/>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="edu.utah.cdmcc.glucose.model.services">  
+   <implementation class="edu.utah.cdmcc.glucose.model.services.IntensiveCareUnitServiceImpl"/>
    <service>
       <provide interface="glucose.IntensiveCareUnitService"/>
    </service>
