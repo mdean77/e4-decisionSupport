@@ -19,6 +19,10 @@ package examples;
 import glucose.GlucosePackage;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Collections;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -50,6 +54,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Environment;
+import org.hsqldb.server.Server;
 
 /**
  * Quick Start Tutorial
@@ -60,6 +65,7 @@ import org.hibernate.cfg.Environment;
 public class Tutorial {
 
 	private static IntensiveCareUnit picu;
+	static org.hsqldb.server.Server server;
 
 	/** The main method */
 	public static void main(String[] args) {
@@ -82,37 +88,45 @@ public class Tutorial {
 		// hibernateProperties.load(in);
 		//
 		// 2) or populated manually:
-		 hibernateProperties.setProperty(Environment.DRIVER,
-		 "com.mysql.jdbc.Driver");
-		 hibernateProperties.setProperty(Environment.USER, "root");
-		 hibernateProperties.setProperty(Environment.URL,
-		 "jdbc:mysql://127.0.0.1:3306/glucose");
-		 hibernateProperties.setProperty(Environment.PASS, "root");
-		 hibernateProperties.setProperty(Environment.DIALECT,
-		 org.hibernate.dialect.MySQL5InnoDBDialect.class.getName());
+		// hibernateProperties.setProperty(Environment.DRIVER,
+		// "com.mysql.jdbc.Driver");
+		// hibernateProperties.setProperty(Environment.USER, "root");
+		// hibernateProperties.setProperty(Environment.URL,
+		// "jdbc:mysql://127.0.0.1:3306/glucose");
+		// hibernateProperties.setProperty(Environment.PASS, "root");
+		// hibernateProperties.setProperty(Environment.DIALECT,
+		// org.hibernate.dialect.MySQL5InnoDBDialect.class.getName());
 
-//		hibernateProperties.setProperty(Environment.DRIVER, "org.hsqldb.jdbcDriver");
-//		hibernateProperties.setProperty(Environment.USER, "sa");
-//		hibernateProperties.setProperty(Environment.URL, "jdbc:hsqldb:mem:library");
-//		hibernateProperties.setProperty(Environment.PASS, "");
-//		hibernateProperties.setProperty(Environment.DIALECT,
-//				org.hibernate.dialect.HSQLDialect.class.getName());
+		// hibernateProperties.setProperty(Environment.DRIVER, "org.hsqldb.jdbcDriver");
+		// hibernateProperties.setProperty(Environment.USER, "sa");
+		// hibernateProperties.setProperty(Environment.URL, "jdbc:hsqldb:mem:library");
+		// hibernateProperties.setProperty(Environment.PASS, "");
+		// hibernateProperties.setProperty(Environment.DIALECT,
+		// org.hibernate.dialect.HSQLDialect.class.getName());
+
+		// NEW properties from Mike Dean's original stuff - will not run if there is not already a running server!
+		hibernateProperties.setProperty(Environment.DRIVER, "org.hsqldb.jdbcDriver");
+		hibernateProperties.setProperty(Environment.USER, "sa");
+		hibernateProperties.setProperty(Environment.URL, "jdbc:hsqldb:hsql://localhost:9001"); // main difference is here
+		hibernateProperties.setProperty(Environment.PASS, "");
+		hibernateProperties.setProperty(Environment.DIALECT, org.hibernate.dialect.HSQLDialect.class.getName());
 
 		// set a specific option
 		// see this page
 		// http://wiki.eclipse.org/Teneo/Hibernate/Configuration_Options
 		// for all the available options
-		hibernateProperties.setProperty(PersistenceOptions.CASCADE_POLICY_ON_NON_CONTAINMENT,
-				"REFRESH,PERSIST,MERGE");
+		hibernateProperties.setProperty(PersistenceOptions.CASCADE_POLICY_ON_NON_CONTAINMENT, "REFRESH,PERSIST,MERGE");
 
 		// use the joined inheritance mapping
 
-		//hibernateProperties.setProperty(PersistenceOptions.INHERITANCE_MAPPING, "JOINED");
+		// hibernateProperties.setProperty(PersistenceOptions.INHERITANCE_MAPPING, "JOINED");
 
 		// use an annotations file as an example
 		// this lets the library use a special table
-//		hibernateProperties.setProperty(PersistenceOptions.PERSISTENCE_XML,
-//				"edu/utah/cdmcc/e4/glucose/model/examples/annotations.xml");
+		// hibernateProperties.setProperty(PersistenceOptions.PERSISTENCE_XML,
+		// "edu/utah/cdmcc/e4/glucose/model/examples/annotations.xml");
+
+		startServer();
 
 		// Create the DataStore.
 		final String dataStoreName = "GlucoseDataStore";
@@ -141,23 +155,19 @@ public class Tutorial {
 			// Note that you must use the EClass name in the HQL query.
 			Query query = session.createQuery("FROM IntensiveCareUnit");
 			List<?> intensiveCareUnits = query.list();
-			if(intensiveCareUnits.isEmpty()){
+			if (intensiveCareUnits.isEmpty()) {
 				picu = GlucoseFactory.eINSTANCE.createIntensiveCareUnit();
 			} else {
 				picu = (IntensiveCareUnit) intensiveCareUnits.get(0);
 			}
-			
-			
+
 			// Make it persistent.
 			session.save(picu);
 			addFakeData();
 
-
-
-
 			// Commit the changes to the database.
 			session.getTransaction().commit();
-			// Close the session. 
+			// Close the session.
 			session.close();
 		}
 
@@ -181,80 +191,85 @@ public class Tutorial {
 			// Verify that the eContainer and references are set correctly.
 			assert (patient.eContainer() == picu);
 			assert (patient.getCreatedBy() == user);
-			
+
 			System.out.println("List of all persons in database:");
 			query = session.createQuery("From Person");
 			List<?> persons = query.list();
-			for (Iterator<?> it = persons.iterator(); it.hasNext();){
+			for (Iterator<?> it = persons.iterator(); it.hasNext();) {
 				Person person = (Person) it.next();
 				System.out.println(person.getName());
 			}
 			System.out.println("The number of persons is " + persons.size());
 			System.out.println();
-			
-			
+
 			System.out.println("List of all PATIENTS in database:");
 			EList<Patient> patients = picu.getPatients();
-			for (Iterator<?> it = patients.iterator(); it.hasNext();){
+			for (Iterator<?> it = patients.iterator(); it.hasNext();) {
 				patient = (Patient) it.next();
 				System.out.println(patient.getName());
 			}
 			System.out.println("The number of patients is " + patients.size());
-			System.out.println();		
+			System.out.println();
 
 			// Commit.
 			session.getTransaction().commit();
 			session.close();
+			
+			try {
+				stopServer();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
-//
-//		try {
-//			String uriStr = "hibernate://?" + HibernateResource.DS_NAME_PARAM + "=" + dataStoreName;
-//			final URI uri = URI.createURI(uriStr);
-//			ResourceSet resourceSet = new ResourceSetImpl();
-//			final Resource res = resourceSet.createResource(uri);
-//
-//			res.load(Collections.EMPTY_MAP);
-//			Iterator<?> it = res.getContents().iterator();
-//			Library libTest;
-//			while (it.hasNext()) {
-//				libTest = (Library) it.next();
-//				System.out.println(libTest.getName());
-//			}
-//
-//			Library libNew = GlucoseFactory.eINSTANCE.createLibrary();
-//			libNew.setName("My Second Library");
-//
-//			// create a writer
-//			Writer writerNew = GlucoseFactory.eINSTANCE.createWriter();
-//			writerNew.setName("I. Asimov");
-//			writerNew.setFirstName("Isaac");
-//			writerNew.setLastName("Asimov");
-//
-//			// and one of his books
-//			Book bookNew = GlucoseFactory.eINSTANCE.createBook();
-//			bookNew.setAuthor(writerNew);
-//			bookNew.setPages(305);
-//			bookNew.setTitle("Foundation and Empire");
-//			bookNew.setCategory(BookCategory.SCIENCE_FICTION);
+		//
+		// try {
+		// String uriStr = "hibernate://?" + HibernateResource.DS_NAME_PARAM + "=" + dataStoreName;
+		// final URI uri = URI.createURI(uriStr);
+		// ResourceSet resourceSet = new ResourceSetImpl();
+		// final Resource res = resourceSet.createResource(uri);
+		//
+		// res.load(Collections.EMPTY_MAP);
+		// Iterator<?> it = res.getContents().iterator();
+		// Library libTest;
+		// while (it.hasNext()) {
+		// libTest = (Library) it.next();
+		// System.out.println(libTest.getName());
+		// }
+		//
+		// Library libNew = GlucoseFactory.eINSTANCE.createLibrary();
+		// libNew.setName("My Second Library");
+		//
+		// // create a writer
+		// Writer writerNew = GlucoseFactory.eINSTANCE.createWriter();
+		// writerNew.setName("I. Asimov");
+		// writerNew.setFirstName("Isaac");
+		// writerNew.setLastName("Asimov");
+		//
+		// // and one of his books
+		// Book bookNew = GlucoseFactory.eINSTANCE.createBook();
+		// bookNew.setAuthor(writerNew);
+		// bookNew.setPages(305);
+		// bookNew.setTitle("Foundation and Empire");
+		// bookNew.setCategory(BookCategory.SCIENCE_FICTION);
 
-			// add the writer/book to the library.
-//			libNew.getWriters().add(writerNew);
-//			libNew.getBooks().add(bookNew);
-//
-//			// now add the top-level object to the resource
-//			res.getContents().add(libNew);
-//
-//			res.save(null);
-//		} catch (IOException e) {
-//			throw new Error("IOException", e);
-//		}
-		
-		
+		// add the writer/book to the library.
+		// libNew.getWriters().add(writerNew);
+		// libNew.getBooks().add(bookNew);
+		//
+		// // now add the top-level object to the resource
+		// res.getContents().add(libNew);
+		//
+		// res.save(null);
+		// } catch (IOException e) {
+		// throw new Error("IOException", e);
+		// }
+
 	}
-	
-private static void addFakeData() {
-		
+
+	private static void addFakeData() {
+
 		// Create the objects
 		Patient patient1 = GlucoseFactory.eINSTANCE.createPatient();
 		picu.getPatients().add(patient1);
@@ -272,23 +287,22 @@ private static void addFakeData() {
 		patient1.getDecisions().add(decision2);
 		patient2.getDecisions().add(decision3);
 		patient2.getDecisions().add(decision4);
-		
+
 		// Give the object fields some values
-		GregorianCalendar birthdate1 = new GregorianCalendar(2000,5,25);
-		GregorianCalendar birthdate2 = new GregorianCalendar(2010,5,25);
-		GregorianCalendar decisionDates1 = new GregorianCalendar(2000,5,26);
-		GregorianCalendar decisionDates2 = new GregorianCalendar(2000,5,27);
-		GregorianCalendar decisionDates3 = new GregorianCalendar(2010,5,26);
-		GregorianCalendar decisionDates4 = new GregorianCalendar(2010,5,27);
-		initializePatientValues(patient1,"Dean","Mike",birthdate1,125.,55.6,"CHOM0099","12-34-56");
-		initializePatientValues(patient2,"Zuspan","Sally",birthdate2,114.6,35.6,"CHLA9099","34-56-78");
-		initializePersonValues(user1,"Welkie", "Katy");
-		initializePersonValues(user2,"Maloney", "Chris");
+		GregorianCalendar birthdate1 = new GregorianCalendar(2000, 5, 25);
+		GregorianCalendar birthdate2 = new GregorianCalendar(2010, 5, 25);
+		GregorianCalendar decisionDates1 = new GregorianCalendar(2000, 5, 26);
+		GregorianCalendar decisionDates2 = new GregorianCalendar(2000, 5, 27);
+		GregorianCalendar decisionDates3 = new GregorianCalendar(2010, 5, 26);
+		GregorianCalendar decisionDates4 = new GregorianCalendar(2010, 5, 27);
+		initializePatientValues(patient1, "Dean", "Mike", birthdate1, 125., 55.6, "CHOM0099", "12-34-56");
+		initializePatientValues(patient2, "Zuspan", "Sally", birthdate2, 114.6, 35.6, "CHLA9099", "34-56-78");
+		initializePersonValues(user1, "Welkie", "Katy");
+		initializePersonValues(user2, "Maloney", "Chris");
 	}
-	
-	private static void initializePatientValues(Patient patient,
-			String last, String first, GregorianCalendar birthdate,
-			Double height, Double weight, String studyID, String medRecNum){
+
+	private static void initializePatientValues(Patient patient, String last, String first, GregorianCalendar birthdate,
+			Double height, Double weight, String studyID, String medRecNum) {
 		patient.setBirthdate(birthdate);
 		initializePersonValues(patient, last, first);
 		patient.setHeight(height);
@@ -296,12 +310,32 @@ private static void addFakeData() {
 		patient.setMedRecNum(medRecNum);
 		patient.setStudyID(studyID);
 		patient.setStatus(StatusType.SAMPLE);
-		
+
 	}
 
-	private static void initializePersonValues(Person person, String last,
-			String first) {
+	private static void initializePersonValues(Person person, String last, String first) {
 		person.setFirstName(first);
 		person.setLastName(last);
 	}
+
+	public static void startServer() {
+		String[] args1 = { "-database", "glucoseData", "-port", String.valueOf(9001), "-no_system_exit", "true" };
+		if (server == null) server = new Server();
+		Server.main(args1);
+		server.start();
+	};
+	
+	public static void stopServer() throws SQLException{
+		if (server != null){
+			Connection con = DriverManager.getConnection("jdbc:hsqldb:hsql://localhost:9001","sa","");
+		String sql = "SHUTDOWN";
+		Statement stmt = con.createStatement();
+		stmt.executeUpdate(sql);
+		stmt.close();
+		server = null;
+		}
+	
+		
+	}
+
 }
