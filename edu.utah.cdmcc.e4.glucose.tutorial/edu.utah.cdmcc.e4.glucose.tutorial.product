@@ -3,7 +3,6 @@
 
 <product name="edu.utah.cdmcc.e4.glucose.tutorial" id="edu.utah.cdmcc.e4.glucose.tutorial.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" useFeatures="false" includeLaunchers="true">
 
-
    <configIni use="default">
    </configIni>
 
@@ -14,7 +13,6 @@
 
    <windowImages/>
 
-
    <launcher>
       <solaris/>
       <win useIco="false">
@@ -22,11 +20,9 @@
       </win>
    </launcher>
 
-
    <vm>
       <macos include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6</macos>
    </vm>
-
 
    <plugins>
       <plugin id="com.ibm.icu"/>
@@ -34,7 +30,7 @@
       <plugin id="edu.utah.cdmcc.e4.glucose.model"/>
       <plugin id="edu.utah.cdmcc.e4.glucose.model.edit"/>
       <plugin id="edu.utah.cdmcc.e4.glucose.tutorial"/>
-      <plugin id="edu.utah.cdmcc.glucose.tutorial.services"/>
+      <plugin id="edu.utah.cdmcc.glucose.model.services"/>
       <plugin id="javax.annotation"/>
       <plugin id="javax.inject"/>
       <plugin id="javax.persistence"/>
