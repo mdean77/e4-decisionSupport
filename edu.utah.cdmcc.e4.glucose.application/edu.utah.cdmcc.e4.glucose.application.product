@@ -29,7 +29,7 @@
       <plugin id="edu.utah.cdmcc.e4.glucose.application"/>
       <plugin id="edu.utah.cdmcc.e4.glucose.model"/>
       <plugin id="edu.utah.cdmcc.e4.glucose.model.edit"/>
-      <plugin id="edu.utah.cdmcc.glucose.tutorial.services"/>
+      <plugin id="edu.utah.cdmcc.glucose.model.services"/>
       <plugin id="javax.annotation"/>
       <plugin id="javax.inject"/>
       <plugin id="javax.persistence"/>
